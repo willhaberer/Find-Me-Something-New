@@ -1,8 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from "@apollo/client";
 
 import "./App.css";
 import Home from "./pages/Home";
+
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
@@ -23,15 +33,17 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <div id="body">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-        </Routes>
-      </div>
-      <Footer />
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Navbar />
+        <div id="body">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </ApolloProvider>
   );
 }
 
