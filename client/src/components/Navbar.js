@@ -5,9 +5,8 @@ import logo from "../assets/fmsnLogoWhite.png";
 
 const Navbar = () => {
   return (
-    <nav id="navbar">
+    <div id="navbar">
       <Link id="link" style={{ textDecoration: "none" }} to="/">
-        {/* <h1>FMSN</h1> */}
         <img
           id="logo"
           className="image"
@@ -17,7 +16,7 @@ const Navbar = () => {
           width="15%"
         />
       </Link>
-    </nav>
+    </div>
   );
 };
 
