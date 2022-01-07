@@ -10,6 +10,9 @@ import { setContext } from "@apollo/client/link/context";
 import "./App.css";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import Spotify from "./pages/Spotify";
+import Soundcloud from "./pages/Soundcloud";
+import Youtube from "./pages/Youtube";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -45,10 +48,10 @@ function App() {
             <Spotify />
           </Route>
           <Route exact path="/soundcloud">
-            <Signup />
+            <Soundcloud />
           </Route>
           <Route exact path="/youtube">
-            <Weight />
+            <Youtube />
           </Route>
         </div>
       </BrowserRouter>
