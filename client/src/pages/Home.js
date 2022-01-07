@@ -4,19 +4,19 @@ import "../styles/Home.css";
 
 function Home() {
   return (
-    <div>
+    <div id="mainContainer">
       <h1>Welcome to Find Me Something New</h1>
-      <ul id="navtabs">
+      <div id="linkContainer">
         <Link id="link" to="/spotify">
-          <li>Spotify</li>
+          <h3 id="spotifyLink">Spotify</h3>
         </Link>
         <Link id="link" to="/youtube">
-          <li>Youtube</li>
+          <h3 id="youtubeLink">Youtube</h3>
         </Link>
         <Link id="link" to="/soundcloud">
-          <li>Soundcloud</li>
+          <h3 id="soundcloudLink">Soundcloud</h3>
         </Link>
-      </ul>
+      </div>
       <h2>Please choose one of the above sections to get started!</h2>
     </div>
   );
