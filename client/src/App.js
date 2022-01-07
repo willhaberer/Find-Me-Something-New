@@ -41,6 +41,15 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
           </Routes>
+          <Route exact path="/spotify">
+            <Spotify />
+          </Route>
+          <Route exact path="/soundcloud">
+            <Signup />
+          </Route>
+          <Route exact path="/youtube">
+            <Weight />
+          </Route>
         </div>
       </BrowserRouter>
     </ApolloProvider>
