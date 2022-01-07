@@ -13,8 +13,8 @@ const Navbar = () => {
           className="image"
           src={logo}
           alt="logo"
-          height="20%"
-          width="20%"
+          height="15%"
+          width="15%"
         />
       </Link>
     </nav>
