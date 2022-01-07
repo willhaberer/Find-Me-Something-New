@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/Home.css";
 
 function Home() {
   return (
     <div>
       <h1>Welcome to Find Me Something New</h1>
       <ul id="navtabs">
-        <Link id="link" style={{ textDecoration: "none" }} to="/spotify">
+        <Link id="link" to="/spotify">
           <li>Spotify</li>
         </Link>
-        <Link id="link" style={{ textDecoration: "none" }} to="/youtube">
+        <Link id="link" to="/youtube">
           <li>Youtube</li>
         </Link>
-        <Link id="link" style={{ textDecoration: "none" }} to="/soundcloud">
+        <Link id="link" to="/soundcloud">
           <li>Soundcloud</li>
         </Link>
       </ul>
