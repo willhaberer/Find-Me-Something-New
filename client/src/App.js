@@ -8,8 +8,9 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import "./App.css";
-import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+
 import Spotify from "./pages/Spotify";
 import Soundcloud from "./pages/Soundcloud";
 import Youtube from "./pages/Youtube";
@@ -43,16 +44,10 @@ function App() {
         <div id="body">
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/spotify" element={<Spotify />} />
+            <Route exact path="/soundcloud" element={<Soundcloud />} />
+            <Route exact path="/youtube" element={<Youtube />} />
           </Routes>
-          <Route exact path="/spotify">
-            <Spotify />
-          </Route>
-          <Route exact path="/soundcloud">
-            <Soundcloud />
-          </Route>
-          <Route exact path="/youtube">
-            <Youtube />
-          </Route>
         </div>
       </BrowserRouter>
     </ApolloProvider>
