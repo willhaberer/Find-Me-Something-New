@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getYoutubeVid } from "../utils/API";
+import { getYoutubeVid, getVidId } from "../utils/API";
 import { useMutation } from "@apollo/react-hooks";
 
 function Youtube() {
@@ -8,14 +8,15 @@ function Youtube() {
     event.preventDefault();
 
     try {
-      const response = await getYoutubeVid();
+      const response = await getVidId();
 
       if (!response) {
         throw new Error("something went wrong!");
       }
-      const items = await response.json();
-
+      const { items } = await response.json();
       console.log(items);
+      const id = items[0].id.videoId;
+      console.log(id);
     } catch (err) {
       console.error(err);
     }
