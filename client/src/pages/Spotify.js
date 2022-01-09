@@ -8,16 +8,18 @@ function Spotify() {
 
     try {
       const response = await getSpotifyToken();
-      console.log(response);
+
       const data = await response.json();
-      console.log(data);
+
       const token = data.access_token;
 
       if (!token) {
         throw new Error("something went wrong!");
       }
 
-      const track = await getRecTrack(token);
+      const result = await getRecTrack(token);
+      const trackData = await result.json();
+      console.log(trackData);
     } catch (err) {
       console.error(err);
     }

@@ -87,13 +87,13 @@ export const getRecTrack = async (token) => {
   const artist = getRandomArtistId();
   const track = getRandomTrackId();
   const result = await fetch(
-    `https://api.spotify.com/v1/recommendations?limit=10&market=ES&seed_artists=${artist}&seed_genres=${genre}&seed_tracks=${track}&max_popularity=5`,
+    `https://api.spotify.com/v1/recommendations?limit=${limit}&market=ES&seed_artists=${artist}&seed_genres=${genre}&seed_tracks=${track}&max_popularity=5`,
     {
       method: "GET",
       headers: { Authorization: "Bearer " + token },
     }
   );
+  console.log(result);
 
-  const data = await result.json();
-  return data.playlists.items;
+  return result;
 };
