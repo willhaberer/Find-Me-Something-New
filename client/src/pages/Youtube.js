@@ -10,10 +10,12 @@ function Youtube() {
     try {
       const response = await getYoutubeVid();
 
-      if (!response.ok) {
+      if (!response) {
         throw new Error("something went wrong!");
       }
-      console.log(response);
+      const items = await response.json();
+
+      console.log(items);
     } catch (err) {
       console.error(err);
     }
@@ -22,6 +24,7 @@ function Youtube() {
   return (
     <div>
       <h1>this is the youtube page</h1>
+      <button onClick={handleFormSubmit}>Get Youtube Vid</button>
     </div>
   );
 }
