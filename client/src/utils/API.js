@@ -1,10 +1,14 @@
 export const getVidId = () => {
-  return true;
+  const response = await fetch(
+    "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&key=[key]"
+  );
+
+  return response;
 };
 
-export const getYoutubeVid = async () => {
+export const getYoutubeVid = async (id) => {
   const response = await fetch(
-    "https://youtube.googleapis.com/youtube/v3/search?part=snippet&part=statistics&maxResults=1&key=[key]"
+    "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&key=[key]"
   );
 
   return response;
