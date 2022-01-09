@@ -1,4 +1,6 @@
 //youtube api
+var base64 = require("base-64");
+
 export const getVidId = async () => {
   const response = await fetch(
     "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&key=[Key]"
@@ -16,17 +18,18 @@ export const getYoutubeVid = async (id) => {
 };
 
 //spotify api
-
-export const _getToken = async () => {
-  const result = await fetch("https://accounts.spotify.com/api/token", {
+const clientId = "temp";
+const clientSecret = "temp";
+export const getSpotifyToken = async () => {
+  const auth = base64.encode(clientId + ":" + clientSecret);
+  const response = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
-      Authorization: "Basic " + (clientId + ":" + clientSecret),
+      Authorization: "Basic " + auth,
     },
     body: "grant_type=client_credentials",
   });
 
-  const data = await result.json();
-  return data.access_token;
+  return response;
 };
