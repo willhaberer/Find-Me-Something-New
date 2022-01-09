@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getSpotifyToken } from "../utils/API";
+import { getSpotifyToken, getRecTrack } from "../utils/API";
 import { useMutation } from "@apollo/react-hooks";
 
 function Spotify() {
@@ -16,7 +16,8 @@ function Spotify() {
       if (!token) {
         throw new Error("something went wrong!");
       }
-      console.log(token);
+
+      const track = await getRecTrack(token);
     } catch (err) {
       console.error(err);
     }
