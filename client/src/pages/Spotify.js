@@ -24,7 +24,6 @@ function Spotify() {
       const trackData = await result.json();
       console.log(trackData);
       const trackID = trackData.tracks[0].id;
-      console.log(trackID);
       setTrackURL(trackData.tracks[0].external_urls.spotify);
       const inter = "https://open.spotify.com/embed/track/" + trackID;
       console.log("inter: " + inter);
@@ -37,7 +36,7 @@ function Spotify() {
   if (embedCode === "initial") {
     return (
       <div id="container">
-        <button id="songBtn" class="bouncy" onClick={handleFormSubmit}>
+        <button id="songBtn" className="bouncy" onClick={handleFormSubmit}>
           Get Song
         </button>
       </div>
@@ -45,7 +44,7 @@ function Spotify() {
   } else {
     return (
       <div id="container">
-        <button id="songBtn" class="bouncy" onClick={handleFormSubmit}>
+        <button id="songBtn" className="bouncy" onClick={handleFormSubmit}>
           Get Song
         </button>
         <iframe
@@ -55,7 +54,9 @@ function Spotify() {
           frameBorder="0"
           allowtransparency="true"
           allow="encrypted-media"
+          id="spotifyPlayer"
         ></iframe>
+        <br></br>
         <a id="trackLink" href={trackURL} target="_blank">
           Listen On Spotify
         </a>
