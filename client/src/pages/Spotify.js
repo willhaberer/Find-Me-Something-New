@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { getSpotifyToken, getRecTrack } from "../utils/API";
+import "../styles/Spotify.css";
 
 function Spotify() {
   const [embedCode, setEmbedCode] = useState("initial");
@@ -35,14 +36,18 @@ function Spotify() {
 
   if (embedCode === "initial") {
     return (
-      <div>
-        <button onClick={handleFormSubmit}>Get Song</button>
+      <div id="container">
+        <button id="songBtn" class="bouncy" onClick={handleFormSubmit}>
+          Get Song
+        </button>
       </div>
     );
   } else {
     return (
-      <div>
-        <button onClick={handleFormSubmit}>Get Song</button>
+      <div id="container">
+        <button id="songBtn" class="bouncy" onClick={handleFormSubmit}>
+          Get Song
+        </button>
         <iframe
           src={embedCode}
           width="300"
@@ -51,7 +56,7 @@ function Spotify() {
           allowtransparency="true"
           allow="encrypted-media"
         ></iframe>
-        <a href={trackURL} target="_blank">
+        <a id="trackLink" href={trackURL} target="_blank">
           Listen On Spotify
         </a>
       </div>
