@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { getSpotifyToken, getRecTrack } from "../utils/API";
-import { useMutation } from "@apollo/react-hooks";
 
 function Spotify() {
   const [embedCode, setEmbedCode] = useState("initial");
+  const [trackURL, setTrackURL] = useState("initial");
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -21,8 +21,10 @@ function Spotify() {
 
       const result = await getRecTrack(token);
       const trackData = await result.json();
+      console.log(trackData);
       const trackID = trackData.tracks[0].id;
       console.log(trackID);
+      setTrackURL(trackData.tracks[0].external_urls.spotify);
       const inter = "https://open.spotify.com/embed/track/" + trackID;
       console.log("inter: " + inter);
       setEmbedCode(inter);
@@ -34,14 +36,12 @@ function Spotify() {
   if (embedCode === "initial") {
     return (
       <div>
-        <h1>this is the spotify page</h1>
         <button onClick={handleFormSubmit}>Get Song</button>
       </div>
     );
   } else {
     return (
       <div>
-        <h1>this is the spotify page</h1>
         <button onClick={handleFormSubmit}>Get Song</button>
         <iframe
           src={embedCode}
@@ -51,20 +51,12 @@ function Spotify() {
           allowtransparency="true"
           allow="encrypted-media"
         ></iframe>
+        <a href={trackURL} target="_blank">
+          Listen On Spotify
+        </a>
       </div>
     );
   }
-}
-
-{
-  /* <iframe
-        src={embedCode.name}
-        width="300"
-        height="380"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-      ></iframe> */
 }
 
 export default Spotify;
