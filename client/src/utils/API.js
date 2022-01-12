@@ -18,6 +18,7 @@ export const getYoutubeVid = async (id) => {
 };
 
 //spotify api
+//i need to put all the randoms together into more coherant groups
 const clientId = "temp";
 const clientSecret = "temp";
 export const getSpotifyToken = async () => {
