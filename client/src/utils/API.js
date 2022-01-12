@@ -18,7 +18,6 @@ export const getYoutubeVid = async (id) => {
 };
 
 //spotify api
-//i need to put all the randoms together into more coherant groups
 const clientId = "temp";
 const clientSecret = "temp";
 export const getSpotifyToken = async () => {
@@ -35,60 +34,34 @@ export const getSpotifyToken = async () => {
   return response;
 };
 
-function getRandomGenre() {
-  var genreList = [
-    "pop",
-    "rap",
-    "country",
-    "emo",
-    "jazz",
-    "trap",
-    "house",
-    "latin",
-    "rock",
-    "edm",
-    "k-pop",
+function getRandomSeed() {
+  var seedList = [
+    //8485, 1:15
+    {
+      artist: "3LwiPwIJNshV4ItekGcIMo",
+      track: "0TNFCRzOnlgu7W1K47sFnY",
+      genre: "hyperpop",
+    },
+    //luke combs, when it rains
+    {
+      artist: "718COspgdWOnwOFpJHRZHS",
+      track: "1mMLMZYXkMueg65jRRWG1l",
+      genre: "country",
+    },
   ];
 
-  return genreList[Math.floor(Math.random() * (genreList.length - 1))];
-}
-
-function getRandomArtistId() {
-  var artistList = [
-    "245PKF3hKjtxJKIG153kF0",
-    "r4kqFrZkeqDfOIEqTWqbOOV",
-    "3hOdow4ZPmrby7Q1wfPLEy",
-    "55EarwWraRQY9diMo9Oeul",
-    "j0YHgnSkV3S5mvSSCTRWDi5",
-    "2qDIR2WlcW3llkGqJWg9VJ",
-    "4oUHIQIBe0LHzYfvXNW4QM",
-    "718COspgdWOnwOFpJHRZHS",
-    "6KAgrAiCdJPDucMqR1kvMn",
-    "4cJKDGSv4Dz9QycXYmo565",
-    "6zqcGQ6MH6yetBUoquMnL7",
-    "3dkhk6RTgOerN0NQEmt8Nc",
-  ];
-
-  return artistList[Math.floor(Math.random() * (artistList.length - 1))];
-}
-
-function getRandomTrackId() {
-  var trackList = [
-    "1bV0Yu3Hm7RhHUKB6ATnlq",
-    "4GRLGjwgWzZ33HQU3BIdH9",
-    "0c6xIDDpzE81m2q797ordA",
-  ];
-
-  return trackList[Math.floor(Math.random() * (trackList.length - 1))];
+  return seedList[Math.floor(Math.random() * seedList.length)];
 }
 
 export const getRecTrack = async (token) => {
   const limit = 1;
-  const genre = getRandomGenre();
-  const artist = getRandomArtistId();
-  const track = getRandomTrackId();
+  const popularity = 30;
+  const seed = getRandomSeed();
+  const genre = seed.genre;
+  const artist = seed.artist;
+  const track = seed.track;
   const result = await fetch(
-    `https://api.spotify.com/v1/recommendations?limit=${limit}&market=ES&seed_artists=${artist}&seed_genres=${genre}&seed_tracks=${track}&max_popularity=5`,
+    `https://api.spotify.com/v1/recommendations?limit=${limit}&market=ES&seed_artists=${artist}&seed_genres=${genre}&seed_tracks=${track}&max_popularity=${popularity}`,
     {
       method: "GET",
       headers: { Authorization: "Bearer " + token },
