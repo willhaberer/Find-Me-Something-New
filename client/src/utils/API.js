@@ -41,51 +41,77 @@ function getRandomSeed() {
       artist: "3LwiPwIJNshV4ItekGcIMo",
       track: "0TNFCRzOnlgu7W1K47sFnY",
       genre: "hyperpop",
+      market: "ES",
     },
     //luke combs, when it rains
     {
       artist: "718COspgdWOnwOFpJHRZHS",
       track: "1mMLMZYXkMueg65jRRWG1l",
       genre: "country",
+      market: "ES",
     },
     //aries, eta
     {
       artist: "3hOdow4ZPmrby7Q1wfPLEy",
       track: "7a5TsU5Nw3VPrR1HH7mHJN",
-      genre: "emo%20rap%2C%20pop%20rap",
-    },
-    //yeat, sorry bout that
-    {
-      artist: "3qiHUAX7zY4Qnjx8TNUzVx",
-      track: "4VHkjPgAis9JNfc1URn7zZ",
-      genre: "vapor%20trap",
+      genre: "emo",
+      market: "ES",
     },
     //deb never, sorry
     {
       artist: "55EarwWraRQY9diMo9Oeul",
       track: "0CvL2Y2RKLflLw7dBMemaF",
-      genre: "indie%20pop%2C%20indie%20r%26b",
+      genre: "pop",
+      market: "ES",
+    },
+    //brackence, ginger tea
+    {
+      artist: "4kqFrZkeqDfOIEqTWqbOOV",
+      track: "6GVW5k7CvUbUCt10bSUIIW",
+      genre: "emo",
+      market: "ES",
+    },
+    //brackence, ginger tea
+    {
+      artist: "58eJhHRICp87T2IFcP0bYh",
+      track: "6GVW5k7CvUbUCt10bSUIIW",
+      genre: "glitchcore",
+      market: "ES",
+    },
+    //wet, larabar
+    {
+      artist: "2i9uaNzfUtuApAjEf1omV8",
+      track: "40AqvlNZuYdCyo9gbCzOlw",
+      genre: "indie",
+      market: "ES",
     },
   ];
 
   return seedList[Math.floor(Math.random() * seedList.length)];
 }
 
-export const getRecTrack = async (token) => {
+export const getRecTrack = async (token, pop) => {
   const limit = 1;
-  const popularity = 20;
+  const popularity = pop;
   const seed = getRandomSeed();
   const genre = seed.genre;
   const artist = seed.artist;
   const track = seed.track;
+  const market = seed.market;
   const result = await fetch(
-    `https://api.spotify.com/v1/recommendations?limit=${limit}&market=ES&seed_artists=${artist}&seed_genres=${genre}&seed_tracks=${track}&max_popularity=${popularity}`,
+    `https://api.spotify.com/v1/recommendations?limit=${limit}&market=${market}&seed_artists=${artist}&seed_genres=${genre}&seed_tracks=${track}&max_popularity=${popularity}`,
     {
       method: "GET",
       headers: { Authorization: "Bearer " + token },
     }
   );
-  console.log(result);
+  // const result = await fetch(
+  //   `https://api.spotify.com/v1/recommendations?limit=${limit}&market=ES&seed_artists=${artist}&seed_tracks=${track}&max_popularity=${popularity}`,
+  //   {
+  //     method: "GET",
+  //     headers: { Authorization: "Bearer " + token },
+  //   }
+  // );
 
   return result;
 };
