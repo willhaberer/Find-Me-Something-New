@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { getYoutubeVid, getVidId } from "../utils/API";
+import { getVidId } from "../utils/API";
+import "../styles/Youtube.css";
 
 function Youtube() {
   const [embedCode, setEmbedCode] = useState("initial");
@@ -8,8 +9,6 @@ function Youtube() {
     event.preventDefault();
 
     try {
-      setEmbedCode("https://www.youtube.com/embed/PcSPfzU1Wyk");
-
       const response = await getVidId();
 
       if (!response) {
@@ -18,6 +17,8 @@ function Youtube() {
       const { items } = await response.json();
       console.log(items);
       const id = items[0].id.videoId;
+      const inter = "https://www.youtube.com/embed/" + id;
+      setEmbedCode(inter);
       console.log(id);
     } catch (err) {
       console.error(err);
@@ -35,9 +36,9 @@ function Youtube() {
   } else {
     return (
       <div id="container">
-        {/* <button id="vidBtn" className="bouncy" onClick={handleFormSubmit}>
+        <button id="vidBtn" className="bouncy" onClick={handleFormSubmit}>
           Get Vid
-        </button> */}
+        </button>
         <iframe
           width="560"
           height="315"
