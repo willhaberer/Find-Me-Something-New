@@ -16,7 +16,8 @@ function Youtube() {
       }
       const { items } = await response.json();
       console.log(items);
-      const id = items[0].id.videoId;
+      const id = items[items.length - 1].id.videoId;
+
       const inter = "https://www.youtube.com/embed/" + id;
       setEmbedCode(inter);
       console.log(id);
@@ -40,13 +41,14 @@ function Youtube() {
           Get Vid
         </button>
         <iframe
+          id="videoPlayer"
           width="560"
           height="315"
           src={embedCode}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     );

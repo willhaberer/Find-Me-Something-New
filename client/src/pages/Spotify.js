@@ -53,6 +53,7 @@ function Spotify() {
         </button>
         <iframe
           src={embedCode}
+          title="songPlayer"
           width="300"
           height="380"
           frameBorder="0"
