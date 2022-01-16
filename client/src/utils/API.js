@@ -2,16 +2,17 @@
 var base64 = require("base-64");
 
 export const getVidId = async () => {
+  const maxresults = 50;
   const response = await fetch(
-    "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&key=[key]"
+    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxresults}&order=viewCount&key=[key]`
   );
 
   return response;
 };
 
-export const getYoutubeVid = async (id) => {
+export const getYoutubeVidStats = async (id) => {
   const response = await fetch(
-    "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&key=[key]"
+    `https://youtube.googleapis.com/youtube/v3/search?part=statistics&id=${id}&key=[key]`
   );
 
   return response;
