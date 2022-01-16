@@ -20,6 +20,7 @@
 #trackLink:hover {
   color: #000000;
   background-color: #ffffff;
+  cursor: pointer;
 }
 @media all and (max-width: 30em) {
   #songBtn {
@@ -74,5 +75,10 @@
 }
 
 #subtext {
+  color: white;
+}
+
+#songInfo {
+  /* i want these elements to appear next to the song player, the below line is just so it can compile without warnings */
   color: white;
 }

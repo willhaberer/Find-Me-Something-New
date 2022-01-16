@@ -63,17 +63,17 @@ function getRandomSeed() {
       genre: "hyperpop",
       market: "ES",
     },
-    //luke combs, when it rains
-    {
-      artist: "718COspgdWOnwOFpJHRZHS",
-      track: "1mMLMZYXkMueg65jRRWG1l",
-      genre: "country",
-      market: "ES",
-    },
     //aries, eta
     {
       artist: "3hOdow4ZPmrby7Q1wfPLEy",
       track: "7a5TsU5Nw3VPrR1HH7mHJN",
+      genre: "emo",
+      market: "ES",
+    },
+    //brackence, ginger tea
+    {
+      artist: "4kqFrZkeqDfOIEqTWqbOOV",
+      track: "6GVW5k7CvUbUCt10bSUIIW",
       genre: "emo",
       market: "ES",
     },
@@ -84,14 +84,42 @@ function getRandomSeed() {
       genre: "pop",
       market: "ES",
     },
-    //brackence, ginger tea
+    //evisbeats, can you see it, japanese market
     {
-      artist: "4kqFrZkeqDfOIEqTWqbOOV",
-      track: "6GVW5k7CvUbUCt10bSUIIW",
-      genre: "emo",
+      artist: "3dkhk6RTgOerN0NQEmt8Nc",
+      track: "0kTC9iCNOcwuQOkQGGUh1J",
+      genre: "j-rap",
+      market: "JP",
+    },
+    //evisbeats, can you see it, english market
+    {
+      artist: "3dkhk6RTgOerN0NQEmt8Nc",
+      track: "0kTC9iCNOcwuQOkQGGUh1J",
+      genre: "j-rap",
       market: "ES",
     },
-    //brackence, ginger tea
+    //guardin, it rained and it poured
+    {
+      artist: "6zqcGQ6MH6yetBUoquMnL7",
+      track: "43vw4OMZIpjQ4KKcIWKVcl",
+      genre: "lo-fi",
+      market: "ES",
+    },
+    //kanye, ultralight beam
+    {
+      artist: "5K4W6rqBFWDnAN6FQUkS6x",
+      track: "1eQBEelI2NCy7AUTerX0KS",
+      genre: "r%26b",
+      market: "ES",
+    },
+    //luke combs, when it rains
+    {
+      artist: "718COspgdWOnwOFpJHRZHS",
+      track: "1mMLMZYXkMueg65jRRWG1l",
+      genre: "country",
+      market: "ES",
+    },
+    //slush puppy, eat spit
     {
       artist: "58eJhHRICp87T2IFcP0bYh",
       track: "6GVW5k7CvUbUCt10bSUIIW",
