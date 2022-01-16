@@ -5,6 +5,8 @@ import "../styles/Spotify.css";
 function Spotify() {
   const [embedCode, setEmbedCode] = useState("initial");
   const [trackURL, setTrackURL] = useState("initial");
+  const [trackPop, setTrackPop] = useState("initial");
+  const [releaseDate, setReleaseDate] = useState("initial");
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -15,18 +17,20 @@ function Spotify() {
       const data = await response.json();
 
       const token = data.access_token;
+      var pop = 50;
 
       if (!token) {
         throw new Error("something went wrong!");
       }
 
-      const result = await getRecTrack(token);
+      const result = await getRecTrack(token, pop);
       const trackData = await result.json();
       console.log(trackData);
       const trackID = trackData.tracks[0].id;
       setTrackURL(trackData.tracks[0].external_urls.spotify);
+      setTrackPop(trackData.tracks[0].popularity);
+      setReleaseDate(trackData.tracks[0].album.release_date);
       const inter = "https://open.spotify.com/embed/track/" + trackID;
-      console.log("inter: " + inter);
       setEmbedCode(inter);
     } catch (err) {
       console.error(err);
@@ -56,8 +60,11 @@ function Spotify() {
           allow="encrypted-media"
           id="spotifyPlayer"
         ></iframe>
+
+        <h2>Popularity on Spotify: {trackPop}</h2>
+        <h2>Release Date: {releaseDate}</h2>
         <br></br>
-        <a id="trackLink" href={trackURL} target="_blank">
+        <a id="trackLink" href={trackURL} target="_blank" rel="noreferrer">
           Listen On Spotify
         </a>
       </div>
