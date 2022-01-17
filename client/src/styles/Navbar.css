@@ -12,3 +12,11 @@
 #link {
   cursor: pointer;
 }
+
+#loginLink,
+#aboutLink {
+  float: right;
+  margin-right: 1em;
+  padding: 0.25em;
+  border: solid 0.15em white;
+}
