@@ -1,13 +1,16 @@
 import React from "react";
+import "../styles/About.css";
 
 function About() {
   return (
-    <div>
-      <h1>Coming Soon!</h1>
-      <h2>
-        Soundcloud is currently not accepting new projects to be built off its
-        API but once they open back up this page will be updated
-      </h2>
+    <div id="aboutPage">
+      <div id="aboutInfo">
+        <h1>Dislaimer:</h1>
+        <h2>
+          This application is not meant to act as a replacement for Spotify,
+          YouTube or any other application whose content is built into FMSN
+        </h2>
+      </div>
     </div>
   );
 }
