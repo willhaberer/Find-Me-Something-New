@@ -11,7 +11,7 @@ function Home() {
           <h3 id="spotifyLink">Spotify</h3>
         </Link>
         <Link id="link" to="/youtube">
-          <h3 id="youtubeLink">Youtube</h3>
+          <h3 id="youtubeLink">YouTube</h3>
         </Link>
         <Link id="link" to="/soundcloud">
           <h3 id="soundcloudLink">Soundcloud</h3>

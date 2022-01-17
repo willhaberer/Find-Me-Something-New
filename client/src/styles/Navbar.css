@@ -13,7 +13,8 @@
   cursor: pointer;
 }
 
-#loginLink {
+#loginLink,
+#aboutLink {
   float: right;
   margin-right: 1em;
   padding: 0.25em;
