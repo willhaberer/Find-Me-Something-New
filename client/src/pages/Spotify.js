@@ -17,7 +17,7 @@ function Spotify() {
       const data = await response.json();
 
       const token = data.access_token;
-      var pop = 50;
+      var pop = 40;
 
       if (!token) {
         throw new Error("something went wrong!");
@@ -61,9 +61,11 @@ function Spotify() {
           allow="encrypted-media"
           id="spotifyPlayer"
         ></iframe>
-
-        <h2>Popularity on Spotify: {trackPop}</h2>
-        <h2>Release Date: {releaseDate}</h2>
+        <div id="songInfo">
+          <h2>Song Popularity on Spotify: {trackPop}</h2>
+          <h4 id="subtext">(Popularity is on a scale from 0-100)</h4>
+          <h2>Release Date: {releaseDate}</h2>
+        </div>
         <br></br>
         <a id="trackLink" href={trackURL} target="_blank" rel="noreferrer">
           Listen On Spotify
