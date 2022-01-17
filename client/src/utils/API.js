@@ -63,6 +63,13 @@ function getRandomSeed() {
       genre: "hyperpop",
       market: "ES",
     },
+    //andi weiss trio
+    {
+      artist: "7pMhB3Lo7q9XPC4pbNdRlp",
+      track: "628mswwaHdp8bFEKsOCwCa",
+      genre: "jazz",
+      market: "ES",
+    },
     //aries, eta
     {
       artist: "3hOdow4ZPmrby7Q1wfPLEy",
@@ -153,13 +160,6 @@ export const getRecTrack = async (token, pop) => {
       headers: { Authorization: "Bearer " + token },
     }
   );
-  // const result = await fetch(
-  //   `https://api.spotify.com/v1/recommendations?limit=${limit}&market=ES&seed_artists=${artist}&seed_tracks=${track}&max_popularity=${popularity}`,
-  //   {
-  //     method: "GET",
-  //     headers: { Authorization: "Bearer " + token },
-  //   }
-  // );
 
   return result;
 };
