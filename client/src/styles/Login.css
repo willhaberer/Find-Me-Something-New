@@ -1,0 +1,16 @@
+#page {
+  text-align: center;
+}
+
+/* #formContainer {
+  position: absolute;
+} */
+
+#formHeader {
+  color: white;
+  font-size: 2em;
+}
+
+.form-input {
+  margin: 0.25em;
+}
