@@ -19,6 +19,13 @@ const typeDefs = gql`
     profile: Profile
   }
 
+  input SavedBookInput {
+    artists: [String]
+    trackId: String
+    link: String
+    title: String
+  }
+
   type Query {
     users: [User]!
     user(userId: ID!): User
@@ -28,7 +35,7 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    saveSpotifySong(book: SavedSpotifySongInput): User
+    saveSpotifySong(spotifysong: SavedSpotifySongInput): User
     removeSpotifySong(spotifySongId: String!): User
   }
 `;
