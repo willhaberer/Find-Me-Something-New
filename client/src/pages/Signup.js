@@ -46,39 +46,33 @@ const Signup = () => {
     <div id="container">
       <div>
         <h4 id="formHeader">Signup on FMSN</h4>
-        {data ? (
-          <p>
-            Coming Soon: Success! You may now head{" "}
-            <Link to="/profile">to your profile</Link>
-          </p>
-        ) : (
-          <form>
-            <input
-              value={formState.email}
-              name="email"
-              onChange={handleChange}
-              type="email"
-              placeholder="email"
-            />
-            <input
-              value={formState.username}
-              name="username"
-              onChange={handleChange}
-              type="text"
-              placeholder="username"
-            />
-            <input
-              value={formState.password}
-              name="password"
-              onChange={handleChange}
-              type="password"
-              placeholder="Password"
-            />
-            <button id="btn" type="button" onClick={handleFormSubmit}>
-              Submit
-            </button>
-          </form>
-        )}
+
+        <form>
+          <input
+            value={formState.email}
+            name="email"
+            onChange={handleChange}
+            type="email"
+            placeholder="email"
+          />
+          <input
+            value={formState.username}
+            name="username"
+            onChange={handleChange}
+            type="text"
+            placeholder="username"
+          />
+          <input
+            value={formState.password}
+            name="password"
+            onChange={handleChange}
+            type="password"
+            placeholder="Password"
+          />
+          <button id="btn" type="button" onClick={handleFormSubmit}>
+            Submit
+          </button>
+        </form>
 
         {error && <div>{error.message}</div>}
       </div>
