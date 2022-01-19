@@ -22,6 +22,9 @@ const Navbar = () => {
       <Link id="link" to="/about">
         <h3 id="aboutLink">About</h3>
       </Link>
+      <Link id="link" to="/signup">
+        <h3 id="signupLink">Signup</h3>
+      </Link>
     </div>
   );
 };
