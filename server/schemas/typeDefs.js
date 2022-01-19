@@ -1,28 +1,42 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-  type Profile {
+  type User {
     _id: ID
-    name: String
+    username: String
     email: String
-    password: String
+    savedSpotifySongs: [SpotifySong]
   }
-
+  type SpotifySong {
+    _id: ID
+    artists: [String]
+    trackId: String
+    link: String
+    title: String
+  }
   type Auth {
     token: ID!
     profile: Profile
   }
 
+  input SavedBookInput {
+    artists: [String]
+    trackId: String
+    link: String
+    title: String
+  }
+
   type Query {
-    profiles: [Profile]!
-    profile(profileId: ID!): Profile
-    me: Profile
+    users: [User]!
+    user(userId: ID!): User
+    me: User
   }
 
   type Mutation {
-    addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    removeProfile: Profile
+    addUser(username: String!, email: String!, password: String!): Auth
+    saveSpotifySong(spotifysong: SavedSpotifySongInput): User
+    removeSpotifySong(spotifySongId: String!): User
   }
 `;
 
