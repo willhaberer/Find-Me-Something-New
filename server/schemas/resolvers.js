@@ -4,11 +4,11 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    profiles: async () => {
+    users: async () => {
       return User.find();
     },
 
-    profile: async (parent, { userId }) => {
+    user: async (parent, { userId }) => {
       return User.findOne({ _id: userId });
     },
 
@@ -42,18 +42,18 @@ const resolvers = {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: book } },
+          { $addToSet: { savedSpotifySongs: SpotifySong } },
           { new: true }
         );
         return updatedUser;
       }
       throw new AuthenticationError("Incorrect credentials!");
     },
-    removeBook: async (parent, { bookId }, context) => {
+    removeSpotifySong: async (parent, { trackId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { savedBooks: { bookId: bookId } } },
+          { $pull: { savedSpotifySongs: { trackId: trackId } } },
           { new: true }
         );
         return updatedUser;
