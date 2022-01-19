@@ -6,6 +6,8 @@ import { ADD_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
+import "../styles/Signup.css";
+
 const Signup = () => {
   const [formState, setFormState] = useState({
     name: "",
@@ -34,13 +36,54 @@ const Signup = () => {
         variables: { ...formState },
       });
 
-      Auth.login(data.addProfile.token);
+      Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
   };
 
-  return <h1>this is the signup page</h1>;
+  return (
+    <div id="container">
+      <div>
+        <h4 id="formHeader">Signup on FMSN</h4>
+        {data ? (
+          <p>
+            Coming Soon: Success! You may now head{" "}
+            <Link to="/profile">to your profile</Link>
+          </p>
+        ) : (
+          <form>
+            <input
+              value={formState.email}
+              name="email"
+              onChange={handleChange}
+              type="email"
+              placeholder="email"
+            />
+            <input
+              value={formState.username}
+              name="username"
+              onChange={handleChange}
+              type="text"
+              placeholder="username"
+            />
+            <input
+              value={formState.password}
+              name="password"
+              onChange={handleChange}
+              type="password"
+              placeholder="Password"
+            />
+            <button id="btn" type="button" onClick={handleFormSubmit}>
+              Submit
+            </button>
+          </form>
+        )}
+
+        {error && <div>{error.message}</div>}
+      </div>
+    </div>
+  );
 };
 
 export default Signup;
