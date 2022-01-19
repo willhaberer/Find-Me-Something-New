@@ -6,14 +6,9 @@ const songSchema = new Schema({
       type: String,
     },
   ],
-
-  // saved book id from GoogleBooks
   trackId: {
     type: String,
     required: true,
-  },
-  image: {
-    type: String,
   },
   link: {
     type: String,
