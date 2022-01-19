@@ -16,10 +16,10 @@ const typeDefs = gql`
   }
   type Auth {
     token: ID!
-    profile: Profile
+    user: User
   }
 
-  input SavedBookInput {
+  input SavedSpotifySongInput {
     artists: [String]
     trackId: String
     link: String
