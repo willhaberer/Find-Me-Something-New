@@ -7,6 +7,9 @@ import { GET_ME } from "../utils/queries";
 import Auth from "../utils/auth";
 
 const Profile = () => {
+  const { loading, data } = useQuery(GET_ME);
+  const userData = data?.me || {};
+
   if (!userData?.username) {
     return (
       <h4>
