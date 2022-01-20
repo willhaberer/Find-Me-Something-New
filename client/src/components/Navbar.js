@@ -7,7 +7,7 @@ import logo from "../assets/fmsnLogoWhite.png";
 import Auth from "../utils/auth";
 
 const Navbar = () => {
-  const { loading, data } = useQuery(GET_ME);
+  const { data } = useQuery(GET_ME);
   const userData = data?.me || {};
 
   const logoutUser = async (event) => {
