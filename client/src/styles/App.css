@@ -1,11 +1,11 @@
 /* fmsn color pallete */
 
-body {
+/* body {
   background: linear-gradient(-45deg, #d90b7d, #f5afdb, #0b2162, #0b63cf);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
-}
+} */
 
 /* fmsn AM backup pallete */
 
@@ -15,6 +15,15 @@ body {
   animation: gradient 15s ease infinite;
   height: 100vh;
 } */
+
+/* fmsn MC tertiary pallete */
+
+body {
+  background: linear-gradient(-45deg, #ee3124, #f5afdb, #6caddf, #00285e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
 
 @keyframes gradient {
   0% {
