@@ -1,7 +1,8 @@
 #container {
   text-align: center;
 }
-#songBtn {
+#songBtn,
+#saveSongBtn {
   display: block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #ffffff;
@@ -17,13 +18,15 @@
   margin-top: 1em;
 }
 #songBtn:hover,
-#trackLink:hover {
+#trackLink:hover,
+#saveSongBtn:hover {
   color: #000000;
   background-color: #ffffff;
   cursor: pointer;
 }
 @media all and (max-width: 30em) {
-  #songBtn {
+  #songBtn,
+  #saveSongBtn {
     display: block;
     margin: 0.4em auto;
   }

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { getSpotifyToken, getRecTrack } from "../utils/API";
 import "../styles/Spotify.css";
-import { useMutation } from "@apollo/react-hooks";
+import { useMutation, useQuery } from "@apollo/react-hooks";
 import { SAVE_SPOTIFY_SONG } from "../utils/mutations";
+import { GET_ME } from "../utils/queries";
+
+import Auth from "../utils/auth";
 
 function Spotify() {
   //useState
@@ -52,8 +55,38 @@ function Spotify() {
 
   const handleSaveSong = async (event) => {
     event.preventDefault();
-    console.log("haha not saved");
+
     console.log(currentSong);
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      alert("Must be Signed in to Save Songs!");
+      return;
+    }
+
+    try {
+      const response = await saveSong({
+        variables: { spotifysong: currentSong },
+        update: (cache) => {
+          const { me } = cache.readQuery({ query: GET_ME });
+          cache.writeQuery({
+            query: GET_ME,
+            data: {
+              me: {
+                ...me,
+                savedSpotifySongs: [...me.savedSpotifySongs, currentSong],
+              },
+            },
+          });
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("something went wrong, prolly my fault!");
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   if (embedCode === "initial") {
@@ -89,7 +122,7 @@ function Spotify() {
         <a id="trackLink" href={trackURL} target="_blank" rel="noreferrer">
           Listen On Spotify
         </a>
-        <button id="songBtn" className="bouncy" onClick={handleSaveSong}>
+        <button id="saveSongBtn" className="bouncy" onClick={handleSaveSong}>
           Save Song to Profile
         </button>
       </div>
