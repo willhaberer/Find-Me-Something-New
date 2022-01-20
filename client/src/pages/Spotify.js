@@ -10,6 +10,7 @@ function Spotify() {
   const [trackURL, setTrackURL] = useState("initial");
   const [trackPop, setTrackPop] = useState("initial");
   const [releaseDate, setReleaseDate] = useState("initial");
+  const [currentSong, setCurrentSong] = useState({});
   //useMutation
   const [saveSong] = useMutation(SAVE_SPOTIFY_SONG);
 
@@ -43,6 +44,7 @@ function Spotify() {
       setReleaseDate(trackData.tracks[0].album.release_date);
       const inter = "https://open.spotify.com/embed/track/" + songData.trackId;
       setEmbedCode(inter);
+      setCurrentSong(songData);
     } catch (err) {
       console.error(err);
     }
@@ -51,6 +53,7 @@ function Spotify() {
   const handleSaveSong = async (event) => {
     event.preventDefault();
     console.log("haha not saved");
+    console.log(currentSong);
   };
 
   if (embedCode === "initial") {
