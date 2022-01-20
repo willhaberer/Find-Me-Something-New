@@ -9,7 +9,8 @@
   display: inline;
 }
 
-#link {
+#link,
+#logout {
   cursor: pointer;
 }
 

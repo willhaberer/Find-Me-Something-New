@@ -64,9 +64,9 @@ const Navbar = () => {
         <h3 id="profileLink">Profile</h3>
       </Link>
       <a>
-        <button id="logout" onClick={logoutUser}>
+        <h3 id="logout" onClick={logoutUser}>
           Logout
-        </button>
+        </h3>
       </a>
     </div>
   );
