@@ -9,8 +9,17 @@
 
 /* fmsn AM backup pallete */
 
-body {
+/* body {
   background: linear-gradient(-45deg, #d90b7d, #f5afdb, #1db954, #156e48);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+} */
+
+/* fmsn MC tertiary pallete */
+
+body {
+  background: linear-gradient(-45deg, #ee3124, #f5afdb, #6caddf, #00285e);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
