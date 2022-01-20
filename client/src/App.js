@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import "./App.css";
+import "./styles/App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 
