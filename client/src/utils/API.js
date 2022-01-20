@@ -63,6 +63,13 @@ function getRandomSeed() {
       genre: "hyperpop",
       market: "ES",
     },
+    //8485, instant sobriety
+    {
+      artist: "3LwiPwIJNshV4ItekGcIMo",
+      track: "75Kx1FtkVw9EWYTWV9stYG",
+      genre: "hyperpop",
+      market: "ES",
+    },
     //andi weiss trio
     {
       artist: "7pMhB3Lo7q9XPC4pbNdRlp",
@@ -77,11 +84,32 @@ function getRandomSeed() {
       genre: "emo",
       market: "ES",
     },
+    //aries, riding
+    {
+      artist: "3hOdow4ZPmrby7Q1wfPLEy",
+      track: "4JnX8tY9me7jHqDwgifhwU",
+      genre: "pop",
+      market: "ES",
+    },
+    //brackence, argyle
+    {
+      artist: "4kqFrZkeqDfOIEqTWqbOOV",
+      track: "5PlTDE2RLbcC9vBzbGAG4y",
+      genre: "emo",
+      market: "ES",
+    },
     //brackence, ginger tea
     {
       artist: "4kqFrZkeqDfOIEqTWqbOOV",
       track: "6GVW5k7CvUbUCt10bSUIIW",
       genre: "emo",
+      market: "ES",
+    },
+    //deb never, dissasociate
+    {
+      artist: "55EarwWraRQY9diMo9Oeul",
+      track: "048XKTNqohTNP6C5ny0W0c",
+      genre: "indie%20r%26b",
       market: "ES",
     },
     //deb never, sorry
@@ -124,6 +152,27 @@ function getRandomSeed() {
       artist: "718COspgdWOnwOFpJHRZHS",
       track: "1mMLMZYXkMueg65jRRWG1l",
       genre: "country",
+      market: "ES",
+    },
+    //poor man's poison, feed the machine
+    {
+      artist: "0YHgnSkV3S5mvSSCTRWDi5",
+      track: "4xe3UHiQOH2RNBXcuAKDvG",
+      genre: "deathgrass",
+      market: "ES",
+    },
+    //poor man's poison, give and take
+    {
+      artist: "0YHgnSkV3S5mvSSCTRWDi5",
+      track: "4xe3UHiQOH2RNBXcuAKDvG",
+      genre: "folk",
+      market: "ES",
+    },
+    //slush puppy, juliette
+    {
+      artist: "58eJhHRICp87T2IFcP0bYh",
+      track: "1Po2n7GxUAf6snaUxYekd5",
+      genre: "social%20indie",
       market: "ES",
     },
     //slush puppy, eat spit
