@@ -1,8 +1,9 @@
 import React from "react";
 
-import { useQuery } from "@apollo/react-hooks";
+import { useQuery, useMutation } from "@apollo/react-hooks";
 // import { getMe, deleteBook } from "../utils/API";
 import { GET_ME } from "../utils/queries";
+import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
 
 import "../styles/Profile.css";
 

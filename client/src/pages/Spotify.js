@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { getSpotifyToken, getRecTrack } from "../utils/API";
 import "../styles/Spotify.css";
+import { useMutation } from "@apollo/react-hooks";
+import { SAVE_SPOTIFY_SONG } from "../utils/mutations";
 
 function Spotify() {
+  //useState
   const [embedCode, setEmbedCode] = useState("initial");
   const [trackURL, setTrackURL] = useState("initial");
   const [trackPop, setTrackPop] = useState("initial");
   const [releaseDate, setReleaseDate] = useState("initial");
+  const [currentSong, setCurrentSong] = useState({});
+  //useMutation
+  const [saveSong] = useMutation(SAVE_SPOTIFY_SONG);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -26,15 +32,28 @@ function Spotify() {
       const result = await getRecTrack(token, pop);
       const trackData = await result.json();
       console.log(trackData);
-      const trackID = trackData.tracks[0].id;
-      setTrackURL(trackData.tracks[0].external_urls.spotify);
+      const songData = {
+        artists: trackData.tracks[0].artists[0].name,
+        trackId: trackData.tracks[0].id,
+        link: trackData.tracks[0].external_urls.spotify,
+        title: trackData.tracks[0].name,
+      };
+
+      setTrackURL(songData.link);
       setTrackPop(trackData.tracks[0].popularity);
       setReleaseDate(trackData.tracks[0].album.release_date);
-      const inter = "https://open.spotify.com/embed/track/" + trackID;
+      const inter = "https://open.spotify.com/embed/track/" + songData.trackId;
       setEmbedCode(inter);
+      setCurrentSong(songData);
     } catch (err) {
       console.error(err);
     }
+  };
+
+  const handleSaveSong = async (event) => {
+    event.preventDefault();
+    console.log("haha not saved");
+    console.log(currentSong);
   };
 
   if (embedCode === "initial") {
@@ -70,6 +89,9 @@ function Spotify() {
         <a id="trackLink" href={trackURL} target="_blank" rel="noreferrer">
           Listen On Spotify
         </a>
+        <button id="songBtn" className="bouncy" onClick={handleSaveSong}>
+          Save Song to Profile
+        </button>
       </div>
     );
   }
