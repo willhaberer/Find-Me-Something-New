@@ -38,8 +38,8 @@ export const getYoutubeVidStats = async (id) => {
 };
 
 //spotify api
-const clientId = "5ac9c70e51a24c30ba105ee7bb648c8b";
-const clientSecret = "9ae15bb0bc274d12a2cb2036a5dbfdd6";
+const clientId = "temp";
+const clientSecret = "temp";
 export const getSpotifyToken = async () => {
   const auth = base64.encode(clientId + ":" + clientSecret);
   const response = await fetch("https://accounts.spotify.com/api/token", {
