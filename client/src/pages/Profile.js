@@ -3,7 +3,7 @@ import React from "react";
 import { useQuery, useMutation } from "@apollo/react-hooks";
 // import { getMe, deleteBook } from "../utils/API";
 import { GET_ME } from "../utils/queries";
-import { SAVE_SPOTIFY_SONG, REMOVE_SPOTIFY_SONG } from "../utils/mutations";
+import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
 
 import "../styles/Profile.css";
 
