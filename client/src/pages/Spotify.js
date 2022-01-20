@@ -53,9 +53,7 @@ function Spotify() {
     }
   };
 
-  const handleSaveSong = async (event) => {
-    event.preventDefault();
-
+  const handleSaveSong = async () => {
     console.log(currentSong);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 

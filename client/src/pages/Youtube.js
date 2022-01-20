@@ -3,7 +3,7 @@ import { getVidId } from "../utils/API";
 import "../styles/Youtube.css";
 
 function Youtube() {
-  const [embedCode, setEmbedCode] = useState("initial");
+  const [embedCode, setEmbedCode] = useState("disabled");
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -33,6 +33,15 @@ function Youtube() {
         <button id="vidBtn" className="bouncy" onClick={handleFormSubmit}>
           Get Vid
         </button>
+      </div>
+    );
+  } else if (embedCode === "disabled") {
+    return (
+      <div id="container">
+        <h1>
+          Youtube API had been temporarily disabled to comply with use
+          Agreement, we hope to have this up in the future
+        </h1>
       </div>
     );
   } else {
