@@ -38,7 +38,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    saveSpotifySong: async (parent, { book }, context) => {
+    saveSpotifySong: async (parent, { SpotifySong }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
