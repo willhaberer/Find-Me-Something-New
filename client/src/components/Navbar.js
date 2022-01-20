@@ -4,10 +4,16 @@ import { useQuery } from "@apollo/react-hooks";
 import { GET_ME } from "../utils/queries";
 import "../styles/Navbar.css";
 import logo from "../assets/fmsnLogoWhite.png";
+import Auth from "../utils/auth";
 
 const Navbar = () => {
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.me || {};
+
+  const logoutUser = async (event) => {
+    event.preventDefault();
+    console.log("logout clicked");
+  };
 
   if (!userData?.username) {
     return (
@@ -56,6 +62,11 @@ const Navbar = () => {
       <Link id="link" to="/profile">
         <h3 id="profileLink">Profile</h3>
       </Link>
+      <a>
+        <button id="logout" onClick={logoutUser}>
+          Logout
+        </button>
+      </a>
     </div>
   );
 };
