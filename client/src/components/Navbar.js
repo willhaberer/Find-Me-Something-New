@@ -13,6 +13,7 @@ const Navbar = () => {
   const logoutUser = async (event) => {
     event.preventDefault();
     console.log("logout clicked");
+    Auth.logout();
   };
 
   if (!userData?.username) {
