@@ -1,0 +1,8 @@
+#profilePage {
+  position: absolute;
+}
+
+#welcome {
+  position: relative;
+  left: 1em;
+}

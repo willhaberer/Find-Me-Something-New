@@ -6,6 +6,8 @@ import { GET_ME } from "../utils/queries";
 
 import Auth from "../utils/auth";
 
+import "../styles/Profile.css";
+
 const Profile = () => {
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.me || {};
@@ -18,7 +20,11 @@ const Profile = () => {
     );
   }
 
-  return <h4>somehow the conditional failed</h4>;
+  return (
+    <div id="profilePage">
+      <h1 id="welcome">Welcome Back {userData.username}!</h1>
+    </div>
+  );
 };
 
 export default Profile;
