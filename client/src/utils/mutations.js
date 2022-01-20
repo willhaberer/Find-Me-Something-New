@@ -23,3 +23,35 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const SAVE_SPOTIFY_SONG = gql`
+  mutation saveSpotifysong($SpotifySong: SavedSpotifySongInput!) {
+    saveSpotifySong(spotifysong: $spotifysong) {
+      username
+      email
+      spotifySongCount
+      savedSpotifySongs {
+        artists
+        trackId
+        link
+        title
+      }
+    }
+  }
+`;
+
+export const REMOVE_SPOTIFY_SONG = gql`
+  mutation removeSpotifySong($trackId: String!) {
+    removeSpotifySong(trackId: $trackId) {
+      username
+      email
+      spotifySongCount
+      savedSpotifySongs {
+        artists
+        trackId
+        link
+        title
+      }
+    }
+  }
+`;
