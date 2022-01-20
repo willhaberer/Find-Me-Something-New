@@ -17,6 +17,7 @@ import Youtube from "./pages/Youtube";
 import Login from "./pages/Login";
 import About from "./pages/About";
 import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -53,6 +54,7 @@ function App() {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/profile" element={<Profile />} />
           </Routes>
         </div>
       </BrowserRouter>

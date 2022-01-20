@@ -15,7 +15,8 @@
 
 #loginLink,
 #aboutLink,
-#signupLink {
+#signupLink,
+#profileLink {
   float: right;
   margin-right: 1em;
   padding: 0.25em;
