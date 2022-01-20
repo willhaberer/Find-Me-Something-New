@@ -9,7 +9,7 @@ import "../styles/Login.css";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [loginUser, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -25,11 +25,12 @@ const Login = (props) => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
+    //add validation that form elements are present
     try {
-      const { data } = await login({
+      const { data } = await loginUser({
         variables: { ...formState },
       });
-
+      console.log(data);
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
