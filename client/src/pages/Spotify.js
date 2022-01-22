@@ -25,7 +25,7 @@ function Spotify() {
       const response = await getSpotifyToken();
       const data = await response.json();
       const token = data.access_token;
-      const pop = 10;
+      const pop = 15;
 
       if (!token) {
         throw new Error("something went wrong!");
@@ -35,7 +35,7 @@ function Spotify() {
       const trackData = await result.json();
       console.log(trackData);
       if (trackData.tracks.length === 0) {
-        handleGetSongPopFifeteen();
+        handleGetSongPopTwenty();
       } else {
         const songData = {
           artists: trackData.tracks[0].artists[0].name,
@@ -57,12 +57,12 @@ function Spotify() {
     }
   };
 
-  const handleGetSongPopFifeteen = async () => {
+  const handleGetSongPopTwenty = async () => {
     try {
       const response = await getSpotifyToken();
       const data = await response.json();
       const token = data.access_token;
-      const pop = 15;
+      const pop = 20;
 
       if (!token) {
         throw new Error("something went wrong!");
@@ -251,7 +251,7 @@ function Spotify() {
     return (
       <div id="container">
         <button id="songBtn" className="bouncy" onClick={handleGetSong}>
-          Get Song
+          New Song
         </button>
         <iframe
           src={embedCode}
@@ -264,7 +264,7 @@ function Spotify() {
           id="spotifyPlayer"
         ></iframe>
         <div id="songInfo">
-          <h2>Song Popularity on Spotify: {trackPop}</h2>
+          <h2>Popularity on Spotify: {trackPop}</h2>
           <h4 id="subtext">(Popularity is on a scale from 0-100)</h4>
           <h2>Release Date: {releaseDate}</h2>
         </div>
@@ -272,9 +272,9 @@ function Spotify() {
         <a id="trackLink" href={trackURL} target="_blank" rel="noreferrer">
           Listen On Spotify
         </a>
-        <button id="saveSongBtn" className="bouncy" onClick={handleSaveSong}>
+        {/* <button id="saveSongBtn" className="bouncy" onClick={handleSaveSong}>
           Save Song to Profile
-        </button>
+        </button> */}
       </div>
     );
   }
