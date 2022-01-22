@@ -77,6 +77,13 @@ export const getRandomSeed = async () => {
       genre: "j-rap",
       market: "ES",
     },
+    //girlfriends, jessica
+    {
+      artist: "4Dwhb9SL7iO3L27oXvEiO7",
+      track: "6yxywHX0rto296j9LsM3Pt",
+      genre: "pop%20punk",
+      market: "ES",
+    },
     //guardin, it rained and it poured
     {
       artist: "6zqcGQ6MH6yetBUoquMnL7",
@@ -84,11 +91,39 @@ export const getRandomSeed = async () => {
       genre: "lo-fi",
       market: "ES",
     },
+    //jon bellion, all time low
+    {
+      artist: "50JJSqHUf2RQ9xsHs0KMHg",
+      track: "0SuLAslEMFZAXf0SwY7syi",
+      genre: "pop%20rap",
+      market: "ES",
+    },
     //kanye, ultralight beam
     {
       artist: "5K4W6rqBFWDnAN6FQUkS6x",
       track: "1eQBEelI2NCy7AUTerX0KS",
       genre: "r%26b",
+      market: "ES",
+    },
+    //kenny hoopla, estella
+    {
+      artist: "5ObBtv5VunwwhQaXXnUrsM",
+      track: "4v2Bq0xDB7uNN73I5b44Du",
+      genre: "modern%20rock",
+      market: "ES",
+    },
+    //lolo zouai, caffeine
+    {
+      artist: "2qDIR2WlcW3llkGqJWg9VJ",
+      track: "0wEPue9rjGWgvRYNgvsUfw",
+      genre: "pop",
+      market: "ES",
+    },
+    //lolo zouai, high highs
+    {
+      artist: "2qDIR2WlcW3llkGqJWg9VJ",
+      track: "2aGNR8A6GnHqoM78T31CCC",
+      genre: "pop%2Cr%26b",
       market: "ES",
     },
     //luke combs, when it rains
@@ -124,6 +159,41 @@ export const getRandomSeed = async () => {
       artist: "58eJhHRICp87T2IFcP0bYh",
       track: "6GVW5k7CvUbUCt10bSUIIW",
       genre: "glitchcore",
+      market: "ES",
+    },
+    //the backseat lovers, kilby girl
+    {
+      artist: "6p2HnfM955TI1bX34dkLnI",
+      track: "1170VohRSx6GwE6QDCHPPH",
+      genre: "indie%20pop",
+      market: "ES",
+    },
+    //the backseat lovers, poolhouse
+    {
+      artist: "6p2HnfM955TI1bX34dkLnI",
+      track: "74f0dpqHhTeTJzs4pmZ1yq",
+      genre: "slc%20indie",
+      market: "ES",
+    },
+    //the longest johns, wellerman
+    {
+      artist: "5k979N1TnPncUyqlXlaRSv",
+      track: "6ZblDQM0Gq0daaPAwuHOmD",
+      genre: "shanty",
+      market: "ES",
+    },
+    //waterparks, i miss having sex
+    {
+      artist: "3QaxveoTiMetZCMp1sftiu",
+      track: "2Rmw7J0krEU75ffhkaK93D",
+      genre: "pop%20punk",
+      market: "ES",
+    },
+    //waterparks, royal
+    {
+      artist: "3QaxveoTiMetZCMp1sftiu",
+      track: "1CMj3RNTdHBnLU7hoZjjKY",
+      genre: "alt%20z",
       market: "ES",
     },
     //wet, larabar
