@@ -13,7 +13,6 @@ This application was built to showcase a full stack MERN application as well as 
 ## Usage
 
 1. Find Me Something New will be availible soon!
-2. find Something New
 
 ## Mock-Up
 
