@@ -25,7 +25,7 @@ function Spotify() {
       const response = await getSpotifyToken();
       const data = await response.json();
       const token = data.access_token;
-      const pop = 15;
+      const pop = 18;
 
       if (!token) {
         throw new Error("something went wrong!");
