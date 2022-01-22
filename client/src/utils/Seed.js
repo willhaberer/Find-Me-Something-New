@@ -21,6 +21,13 @@ export const getRandomSeed = async () => {
       genre: "jazz",
       market: "ES",
     },
+    //aries, bad news
+    {
+      artist: "3hOdow4ZPmrby7Q1wfPLEy",
+      track: "60ZppukPfY43NDU9meKJrz",
+      genre: "emo%20rap",
+      market: "ES",
+    },
     //aries, eta
     {
       artist: "3hOdow4ZPmrby7Q1wfPLEy",
@@ -33,6 +40,13 @@ export const getRandomSeed = async () => {
       artist: "3hOdow4ZPmrby7Q1wfPLEy",
       track: "4JnX8tY9me7jHqDwgifhwU",
       genre: "pop",
+      market: "ES",
+    },
+    //balue, man in the sixties
+    {
+      artist: "06dIgxVtLtZPa5FUIJxqtc",
+      track: "1s9U4QrS2iqXEPuKK7PPLS",
+      genre: "indie%20garage%20rock",
       market: "ES",
     },
     //brackence, argyle
@@ -75,6 +89,13 @@ export const getRandomSeed = async () => {
       artist: "3dkhk6RTgOerN0NQEmt8Nc",
       track: "0kTC9iCNOcwuQOkQGGUh1J",
       genre: "j-rap",
+      market: "ES",
+    },
+    //florence and the machine, never let me go
+    {
+      artist: "1moxjboGR7GNWYIMWsRjgG",
+      track: "6cC9RY7MoUx5z3aHjDTNI6",
+      genre: "barouque%20pop",
       market: "ES",
     },
     //girlfriends, jessica
@@ -133,6 +154,27 @@ export const getRandomSeed = async () => {
       genre: "country",
       market: "ES",
     },
+    //lxst, last time
+    {
+      artist: "2vxh38hZKAV0DlSpnv7cqT",
+      track: "2nYbkkGVP8jK2ER1RYOOm4",
+      genre: "emo%20rap",
+      market: "ES",
+    },
+    //negative xp, Scott Pilgrim
+    {
+      artist: "6GDYGPbleLhFKnmK4TYhQ7",
+      track: "7fJ727E3cIJsYCA2ZhAsAG",
+      genre: "5th%20wave%20emo",
+      market: "ES",
+    },
+    //old crow medicine show, wagon wheel
+    {
+      artist: "4DBi4EYXgiqbkxvWUXUzMi",
+      track: "359krpyCKcFF8SFvqWES9L",
+      genre: "bluegrass,country",
+      market: "ES",
+    },
     //poor man's poison, feed the machine
     {
       artist: "0YHgnSkV3S5mvSSCTRWDi5",
@@ -182,6 +224,20 @@ export const getRandomSeed = async () => {
       genre: "shanty",
       market: "ES",
     },
+    //tm88, slayerr
+    {
+      artist: "5RMUeKq0dZxg9RHE1f0B9P",
+      track: "5X2I1TVUkchLBggRTCMYem",
+      genre: "trap",
+      market: "ES",
+    },
+    //turnpike troubadours
+    {
+      artist: "1YSA4byX5AL1zoTsSTlB03",
+      track: "0pghPocTwFg6ckBUs52SQ8",
+      genre: "red%20dirt",
+      market: "ES",
+    },
     //waterparks, i miss having sex
     {
       artist: "3QaxveoTiMetZCMp1sftiu",
@@ -194,6 +250,13 @@ export const getRandomSeed = async () => {
       artist: "3QaxveoTiMetZCMp1sftiu",
       track: "1CMj3RNTdHBnLU7hoZjjKY",
       genre: "alt%20z",
+      market: "ES",
+    },
+    //watsky, welcome to the family
+    {
+      artist: "3mJ9GlkLzj8Ka7Z7EQaCMi",
+      track: "5RLfHNaPMYfdovGoTjqNpe",
+      genre: "abstract%20hip%20hop",
       market: "ES",
     },
     //wet, larabar
