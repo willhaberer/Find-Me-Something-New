@@ -21,6 +21,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    songsFound: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
 
     savedSpotifySongs: [spotifySongSchema],
   },

@@ -59,6 +59,18 @@ const resolvers = {
         return updatedUser;
       }
     },
+    updateSongsFound: async (parent, { count, userId }, context) => {
+      if (context.user) {
+        const currentCount = User.findOne({ _id: userId }).songsFound;
+        const newCount = currentCount + count;
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { songsFound: { songsFound: newCount } } },
+          { new: true }
+        );
+        return updatedUser;
+      }
+    },
   },
 };
 

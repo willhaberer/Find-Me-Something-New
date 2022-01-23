@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { getSpotifyToken, getRecTrack } from "../utils/API";
 import "../styles/Spotify.css";
 import { useMutation, useQuery } from "@apollo/react-hooks";
-import { SAVE_SPOTIFY_SONG } from "../utils/mutations";
+import { SAVE_SPOTIFY_SONG, UPDATE_SONGS_FOUND } from "../utils/mutations";
 import { GET_ME } from "../utils/queries";
 
 import Auth from "../utils/auth";
@@ -17,10 +17,23 @@ function Spotify() {
 
   //useMutation
   const [saveSong] = useMutation(SAVE_SPOTIFY_SONG);
+  const [updateSongsFound] = useMutation(UPDATE_SONGS_FOUND);
+
+  const { data } = useQuery(GET_ME);
+  const me = data.me || {};
+  console.log(me);
 
   const handleGetSong = async (event) => {
     event.preventDefault();
-
+    if (me._id) {
+      try {
+        await updateSongsFound({
+          variables: { count: 1, userID: me.id },
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    }
     try {
       const response = await getSpotifyToken();
       const data = await response.json();

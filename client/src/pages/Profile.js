@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useQuery, useMutation } from "@apollo/react-hooks";
-// import { getMe, deleteBook } from "../utils/API";
+
 import { GET_ME } from "../utils/queries";
 import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
 
@@ -10,6 +10,7 @@ import "../styles/Profile.css";
 const Profile = () => {
   const { data } = useQuery(GET_ME);
   const userData = data?.me || {};
+  console.log(data);
 
   if (!userData?.username) {
     return (
@@ -22,6 +23,7 @@ const Profile = () => {
   return (
     <div id="profilePage">
       <h1 id="welcome">Welcome Back {userData.username}!</h1>
+      <h3 id="welcome">You Have Found: [{userData.songsFound}] Songs!</h3>
     </div>
   );
 };
