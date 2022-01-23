@@ -12,6 +12,7 @@ const Signup = () => {
     name: "",
     email: "",
     password: "",
+    songsFound: 0,
   });
   const [addUser, { error }] = useMutation(ADD_USER);
 

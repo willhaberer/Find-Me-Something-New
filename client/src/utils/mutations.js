@@ -13,8 +13,18 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_USER = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
+  mutation addUser(
+    $username: String!
+    $email: String!
+    $password: String!
+    $songsFound: Int!
+  ) {
+    addUser(
+      username: $username
+      email: $email
+      password: $password
+      songsFound: $songsFound
+    ) {
       token
       user {
         _id
@@ -52,6 +62,15 @@ export const REMOVE_SPOTIFY_SONG = gql`
         link
         title
       }
+    }
+  }
+`;
+
+export const UPDATE_SONGS_FOUND = gql`
+  mutation updateSongsFound($count: Int!, $userID: String!) {
+    updateSongsFound(count: $count, userID: $userID) {
+      username
+      songsfound
     }
   }
 `;

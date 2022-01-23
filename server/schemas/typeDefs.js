@@ -36,9 +36,15 @@ const typeDefs = gql`
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(
+      username: String!
+      email: String!
+      password: String!
+      songsFound: Int!
+    ): Auth
     saveSpotifySong(spotifysong: SavedSpotifySongInput): User
     removeSpotifySong(spotifySongId: String!): User
+    updateSongsFound(count: Int!, userID: String!): User
   }
 `;
 
