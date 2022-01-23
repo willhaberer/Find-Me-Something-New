@@ -6,6 +6,7 @@ const typeDefs = gql`
     username: String
     email: String
     spotifySongCount: Int
+    songsFound: Int
     savedSpotifySongs: [SpotifySong]
   }
   type SpotifySong {
