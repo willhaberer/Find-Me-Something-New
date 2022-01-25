@@ -19,6 +19,8 @@ import About from "./pages/About";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 
+require("dotenv").config();
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
