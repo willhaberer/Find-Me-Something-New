@@ -10,7 +10,6 @@ import "../styles/Profile.css";
 const Profile = () => {
   const { data } = useQuery(GET_ME);
   const userData = data?.me || {};
-  console.log(data);
 
   if (!userData?.username) {
     return (

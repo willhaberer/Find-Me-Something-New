@@ -20,20 +20,23 @@ function Spotify() {
   const [updateSongsFound] = useMutation(UPDATE_SONGS_FOUND);
 
   const { data } = useQuery(GET_ME);
-  const me = data.me || {};
-  console.log(me);
+  if (data) {
+    const me = data.me || {};
+    console.log(me);
+  }
 
   const handleGetSong = async (event) => {
     event.preventDefault();
-    if (me._id) {
-      try {
-        await updateSongsFound({
-          variables: { count: 1, userID: me.id },
-        });
-      } catch (err) {
-        console.error(err);
-      }
-    }
+    // if (me._id) {
+    //   const userCount = { count: 1, userID: me._id };
+    //   try {
+    //     await updateSongsFound({
+    //       variables: { ...userCount },
+    //     });
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+    // }
     try {
       const response = await getSpotifyToken();
       const data = await response.json();
