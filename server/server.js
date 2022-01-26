@@ -7,20 +7,27 @@ const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
 
-const PORT = process.env.PORT || 3001;
 const app = express();
-
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  // Add context to our server so data from the `authMiddleware()` function can pass data to our resolver functions
-  context: authMiddleware,
-});
-
-server.applyMiddleware({ app });
+const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+let server;
+
+async function startApolloServer() {
+  server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context: authMiddleware,
+    playground: true,
+  });
+
+  await server.start();
+  server.applyMiddleware({ app, path: "/graphql" });
+}
+
+startApolloServer();
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
