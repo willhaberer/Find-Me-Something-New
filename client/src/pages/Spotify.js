@@ -227,34 +227,19 @@ function Spotify() {
   };
 
   const handleSaveSong = async () => {
-    console.log(currentSong);
+    console.log(embedCode);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
       alert("Must be Signed in to Save Songs!");
       return;
     }
-
+    const spotifyTrackId = embedCode;
     try {
-      const response = await saveSong({
-        variables: { spotifysong: currentSong },
-        update: (cache) => {
-          const { me } = cache.readQuery({ query: GET_ME });
-          cache.writeQuery({
-            query: GET_ME,
-            data: {
-              me: {
-                ...me,
-                savedSpotifySongs: [...me.savedSpotifySongs, currentSong],
-              },
-            },
-          });
-        },
+      const { data } = await saveSong({
+        variables: { spotifyTrackId },
       });
-
-      if (!response.ok) {
-        throw new Error("something went wrong, prolly my fault!");
-      }
+      console.log(data);
     } catch (err) {
       console.error(err);
     }
@@ -297,9 +282,9 @@ function Spotify() {
           Listen On Spotify
         </a>
 
-        {/* <button id="saveSongBtn" className="bouncy" onClick={handleSaveSong}>
+        <button id="saveSongBtn" className="bouncy" onClick={handleSaveSong}>
           Save Song to Profile
-        </button> */}
+        </button>
       </div>
     );
   }

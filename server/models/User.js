@@ -27,7 +27,7 @@ const userSchema = new Schema(
       default: 0,
     },
 
-    savedSpotifySongs: [spotifySongSchema],
+    savedSpotifySongs: [String],
   },
 
   {
