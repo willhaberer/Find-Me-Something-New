@@ -14,3 +14,11 @@
 .form-input {
   margin: 0.25em;
 }
+
+#signupLink {
+  margin: auto;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.25em;
+  border: solid 0.15em white;
+}

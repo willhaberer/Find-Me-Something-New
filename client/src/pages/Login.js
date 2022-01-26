@@ -58,7 +58,7 @@ const Login = (props) => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Your Email"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -66,16 +66,18 @@ const Login = (props) => {
                 />
                 <input
                   className="form-input"
-                  placeholder="******"
+                  placeholder="Password"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
+                <br></br>
                 <button
                   className="btn btn-block btn-info"
                   style={{ cursor: "pointer" }}
                   type="submit"
+                  id="btn"
                 >
                   Submit
                 </button>
@@ -87,11 +89,12 @@ const Login = (props) => {
                 {error.message}
               </div>
             )}
+            <br></br>
+            <Link id="signuplink" to="/signup">
+              <h3>Sign Up Here</h3>
+            </Link>
           </div>
         </div>
-        <Link id="link" to="/signup">
-          <h3 id="signupLink">Sign Up Here</h3>
-        </Link>
       </div>
     </main>
   );

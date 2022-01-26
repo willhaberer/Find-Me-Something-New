@@ -14,6 +14,7 @@ function Spotify() {
   const [trackPop, setTrackPop] = useState("initial");
   const [releaseDate, setReleaseDate] = useState("initial");
   const [currentSong, setCurrentSong] = useState({});
+  const [artist, setArtist] = useState("initial");
 
   //useMutation
   const [saveSong] = useMutation(SAVE_SPOTIFY_SONG);
@@ -53,7 +54,7 @@ function Spotify() {
         handleGetSongPopTwenty();
       } else {
         const songData = {
-          artists: trackData.tracks[0].artists[0].name,
+          artist: trackData.tracks[0].artists[0].name,
           trackId: trackData.tracks[0].id,
           link: trackData.tracks[0].external_urls.spotify,
           title: trackData.tracks[0].name,
@@ -62,6 +63,7 @@ function Spotify() {
         setTrackURL(songData.link);
         setTrackPop(trackData.tracks[0].popularity);
         setReleaseDate(trackData.tracks[0].album.release_date);
+        setArtist(songData.artist);
         const inter =
           "https://open.spotify.com/embed/track/" + songData.trackId;
         setEmbedCode(inter);
@@ -90,7 +92,7 @@ function Spotify() {
         handleGetSongPopTwentyfive();
       } else {
         const songData = {
-          artists: trackData.tracks[0].artists[0].name,
+          artist: trackData.tracks[0].artists[0].name,
           trackId: trackData.tracks[0].id,
           link: trackData.tracks[0].external_urls.spotify,
           title: trackData.tracks[0].name,
@@ -103,6 +105,7 @@ function Spotify() {
           "https://open.spotify.com/embed/track/" + songData.trackId;
         setEmbedCode(inter);
         setCurrentSong(songData);
+        setArtist(songData.artist);
       }
     } catch (err) {
       console.error(err);
@@ -127,7 +130,7 @@ function Spotify() {
         handleGetSongPopThirty();
       } else {
         const songData = {
-          artists: trackData.tracks[0].artists[0].name,
+          artist: trackData.tracks[0].artists[0].name,
           trackId: trackData.tracks[0].id,
           link: trackData.tracks[0].external_urls.spotify,
           title: trackData.tracks[0].name,
@@ -140,6 +143,7 @@ function Spotify() {
           "https://open.spotify.com/embed/track/" + songData.trackId;
         setEmbedCode(inter);
         setCurrentSong(songData);
+        setArtist(songData.artist);
       }
     } catch (err) {
       console.error(err);
@@ -164,7 +168,7 @@ function Spotify() {
         handleGetSongPopForty();
       } else {
         const songData = {
-          artists: trackData.tracks[0].artists[0].name,
+          artist: trackData.tracks[0].artists[0].name,
           trackId: trackData.tracks[0].id,
           link: trackData.tracks[0].external_urls.spotify,
           title: trackData.tracks[0].name,
@@ -177,6 +181,7 @@ function Spotify() {
           "https://open.spotify.com/embed/track/" + songData.trackId;
         setEmbedCode(inter);
         setCurrentSong(songData);
+        setArtist(songData.artist);
       }
     } catch (err) {
       console.error(err);
@@ -201,7 +206,7 @@ function Spotify() {
         console.log("nothing below pop 40");
       } else {
         const songData = {
-          artists: trackData.tracks[0].artists[0].name,
+          artist: trackData.tracks[0].artists[0].name,
           trackId: trackData.tracks[0].id,
           link: trackData.tracks[0].external_urls.spotify,
           title: trackData.tracks[0].name,
@@ -214,6 +219,7 @@ function Spotify() {
           "https://open.spotify.com/embed/track/" + songData.trackId;
         setEmbedCode(inter);
         setCurrentSong(songData);
+        setArtist(songData.artist);
       }
     } catch (err) {
       console.error(err);
@@ -280,6 +286,7 @@ function Spotify() {
             id="spotifyPlayer"
           ></iframe>
           <div id="songInfo">
+            <h2>Artist: {artist}</h2>
             <h2>Popularity on Spotify: {trackPop}</h2>
             <h4 id="subtext">(Popularity is on a scale from 0-100)</h4>
             <h2>Release Date: {releaseDate}</h2>
