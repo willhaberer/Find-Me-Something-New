@@ -44,17 +44,11 @@ export const ADD_USER = gql`
 `;
 
 export const SAVE_SPOTIFY_SONG = gql`
-  mutation saveSpotifysong($SpotifySong: SavedSpotifySongInput!) {
-    saveSpotifySong(spotifysong: $spotifysong) {
+  mutation saveSpotifysong($spotifyTrackId: String!) {
+    saveSpotifySong(spotifyTrackId: $spotifyTrackId) {
       username
       email
       spotifySongCount
-      savedSpotifySongs {
-        artists
-        trackId
-        link
-        title
-      }
     }
   }
 `;

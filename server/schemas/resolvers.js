@@ -38,32 +38,18 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    saveSpotifySong: async (parent, { SpotifySong }, context) => {
+    saveSpotifySong: async (parent, { spotifyTrackId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedSpotifySongs: SpotifySong } },
+          { $addToSet: { savedSpotifySongs: spotifyTrackId } },
           { new: true }
         );
         return updatedUser;
       }
       throw new AuthenticationError("Incorrect credentials!");
     },
-    removeSpotifySong: async (parent, { trackId }, context) => {
-      if (context.user) {
-        const updatedUser = await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { savedSpotifySongs: { trackId: trackId } } },
-          { new: true }
-        );
-        return updatedUser;
-      }
-    },
-    // updateSongsFound: async (parent, { userID }) => {
-    //   const currentUser = User.findOne({ _id: userID });
-    //   console.log(currentUser);
-    //   return currentUser;
-    // },
+
     updateSongsFound: async (parent, { userID }) => {
       const updatedUser = await User.findOneAndUpdate(
         { _id: userID },
