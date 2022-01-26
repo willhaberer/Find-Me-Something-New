@@ -44,7 +44,7 @@ const typeDefs = gql`
     ): Auth
     saveSpotifySong(spotifysong: SavedSpotifySongInput): User
     removeSpotifySong(spotifySongId: String!): User
-    updateSongsFound(userID: String!): User
+    updateSongsFound(userId: String!): User
   }
 `;
 

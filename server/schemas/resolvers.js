@@ -59,7 +59,7 @@ const resolvers = {
         return updatedUser;
       }
     },
-    updateSongsFound: async (parent, { userId }, context) => {
+    updateSongsFound: async (parent, userId, context) => {
       if (userId) {
         const currentCount = User.findOne({ _id: userId }).songsFound;
         const newCount = currentCount + 1;

@@ -67,8 +67,8 @@ export const REMOVE_SPOTIFY_SONG = gql`
 `;
 
 export const UPDATE_SONGS_FOUND = gql`
-  mutation updateSongsFound($userID: String!) {
-    updateSongsFound(userID: $userID) {
+  mutation updateSongsFound($userId: String!) {
+    updateSongsFound(userId: $userId) {
       username
       songsfound
     }
