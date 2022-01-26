@@ -44,8 +44,8 @@ const Signup = () => {
 
   return (
     <div id="container">
-      <div>
-        <h4 id="formHeader">Signup on FMSN</h4>
+      <div id="formContainer">
+        <h4 id="formHeader">Signup for FMSN</h4>
 
         <form>
           <input
@@ -53,14 +53,14 @@ const Signup = () => {
             name="email"
             onChange={handleChange}
             type="email"
-            placeholder="email"
+            placeholder="Email"
           />
           <input
             value={formState.username}
             name="username"
             onChange={handleChange}
             type="text"
-            placeholder="username"
+            placeholder="Username"
           />
           <input
             value={formState.password}
@@ -69,6 +69,7 @@ const Signup = () => {
             type="password"
             placeholder="Password"
           />
+          <br></br>
           <button id="btn" type="button" onClick={handleFormSubmit}>
             Submit
           </button>
