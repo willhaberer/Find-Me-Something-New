@@ -20,23 +20,22 @@ function Spotify() {
   const [updateSongsFound] = useMutation(UPDATE_SONGS_FOUND);
 
   const { data } = useQuery(GET_ME);
-  if (data) {
-    const me = data.me || {};
-    console.log(me);
-  }
 
   const handleGetSong = async (event) => {
     event.preventDefault();
-    // if (me._id) {
-    //   const userCount = { count: 1, userID: me._id };
-    //   try {
-    //     await updateSongsFound({
-    //       variables: { ...userCount },
-    //     });
-    //   } catch (err) {
-    //     console.error(err);
-    //   }
-    // }
+
+    if (data.me._id) {
+      const userId = data.me._id;
+      console.log(userId);
+
+      try {
+        const data = await updateSongsFound(userId);
+        console.log(data);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
     try {
       const response = await getSpotifyToken();
       const data = await response.json();
@@ -269,25 +268,28 @@ function Spotify() {
         <button id="songBtn" className="bouncy" onClick={handleGetSong}>
           New Song
         </button>
-        <iframe
-          src={embedCode}
-          title="songPlayer"
-          width="300"
-          height="380"
-          frameBorder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-          id="spotifyPlayer"
-        ></iframe>
-        <div id="songInfo">
-          <h2>Popularity on Spotify: {trackPop}</h2>
-          <h4 id="subtext">(Popularity is on a scale from 0-100)</h4>
-          <h2>Release Date: {releaseDate}</h2>
+        <div id="songAndInfo">
+          <iframe
+            src={embedCode}
+            title="songPlayer"
+            width="300"
+            height="380"
+            frameBorder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+            id="spotifyPlayer"
+          ></iframe>
+          <div id="songInfo">
+            <h2>Popularity on Spotify: {trackPop}</h2>
+            <h4 id="subtext">(Popularity is on a scale from 0-100)</h4>
+            <h2>Release Date: {releaseDate}</h2>
+          </div>
         </div>
         <br></br>
         <a id="trackLink" href={trackURL} target="_blank" rel="noreferrer">
           Listen On Spotify
         </a>
+
         {/* <button id="saveSongBtn" className="bouncy" onClick={handleSaveSong}>
           Save Song to Profile
         </button> */}
