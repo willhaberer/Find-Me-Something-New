@@ -25,7 +25,7 @@ function Spotify() {
   const handleGetSong = async (event) => {
     event.preventDefault();
 
-    if (data.me._id) {
+    if (data) {
       const userId = data.me._id;
       console.log(userId);
 

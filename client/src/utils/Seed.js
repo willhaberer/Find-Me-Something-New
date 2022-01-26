@@ -1,5 +1,19 @@
 export const getRandomSeed = async () => {
   var seedList = [
+    //100 gecs, money machine
+    {
+      artist: "6PfSUFtkMVoDkx4MQkzOi3",
+      track: "61bwFjzXGG1x2aZsANdLyl",
+      genre: "hyperpop",
+      market: "ES",
+    },
+    //100 gecs, ringtone remix
+    {
+      artist: "6PfSUFtkMVoDkx4MQkzOi3",
+      track: "2T93MtJuKMzcGRTR8fdizV",
+      genre: "dance%20pop",
+      market: "ES",
+    },
     //8485, 1:15
     {
       artist: "3LwiPwIJNshV4ItekGcIMo",
@@ -12,6 +26,13 @@ export const getRandomSeed = async () => {
       artist: "3LwiPwIJNshV4ItekGcIMo",
       track: "75Kx1FtkVw9EWYTWV9stYG",
       genre: "hyperpop",
+      market: "ES",
+    },
+    //alabama, dixieland delight
+    {
+      artist: "6rJqqRce0Kvo2dJUXoHleC",
+      track: "0bM1z18RQpr61UuI1LemIK",
+      genre: "country",
       market: "ES",
     },
     //andi weiss trio
@@ -42,11 +63,39 @@ export const getRandomSeed = async () => {
       genre: "pop",
       market: "ES",
     },
+    //audrey nuna, damn right
+    {
+      artist: "0Wwji82sLA0Hcvtuak3omb",
+      track: "01ukVTKa6DhejzNulpoG2t",
+      genre: "modern%20indie%20pop",
+      market: "ES",
+    },
+    //audrey nuna, space
+    {
+      artist: "0Wwji82sLA0Hcvtuak3omb",
+      track: "0mvKoOMnjfGtgTEUQAHWMs",
+      genre: "chill%20r%26b",
+      market: "ES",
+    },
     //balue, man in the sixties
     {
       artist: "06dIgxVtLtZPa5FUIJxqtc",
       track: "1s9U4QrS2iqXEPuKK7PPLS",
       genre: "indie%20garage%20rock",
+      market: "ES",
+    },
+    //bea miller, feels like home
+    {
+      artist: "1o2NpYGqHiCq7FoiYdyd1x",
+      track: "0T9un1tCka7l3lwsJmmLLU",
+      genre: "electropop",
+      market: "ES",
+    },
+    //billy joel, vienna
+    {
+      artist: "6zFYqv1mOsgBRQbae3JJ9e",
+      track: "4U45aEWtQhrm8A5mxPaFZ7",
+      genre: "piano%20rock",
       market: "ES",
     },
     //brackence, argyle
@@ -61,6 +110,13 @@ export const getRandomSeed = async () => {
       artist: "4kqFrZkeqDfOIEqTWqbOOV",
       track: "6GVW5k7CvUbUCt10bSUIIW",
       genre: "emo",
+      market: "ES",
+    },
+    //coa, akiba
+    {
+      artist: "6cHHFikz4JtK0BmU86vnvo",
+      track: "6Uh6sqPKqPUxvKue0rZSaP",
+      genre: "future%20funk",
       market: "ES",
     },
     //deb never, dissasociate
@@ -98,6 +154,13 @@ export const getRandomSeed = async () => {
       genre: "barouque%20pop",
       market: "ES",
     },
+    //francis and the lights, may i have this dance
+    {
+      artist: "23EA28263XvtIrXuySX6oI",
+      track: "0VaIsQoIQY10uxBrOyZ5cQ",
+      genre: "alternative%20r%26b",
+      market: "ES",
+    },
     //girlfriends, jessica
     {
       artist: "4Dwhb9SL7iO3L27oXvEiO7",
@@ -110,6 +173,20 @@ export const getRandomSeed = async () => {
       artist: "6zqcGQ6MH6yetBUoquMnL7",
       track: "43vw4OMZIpjQ4KKcIWKVcl",
       genre: "lo-fi",
+      market: "ES",
+    },
+    //johan bach, violin concerto in a minor
+    {
+      artist: "5aIqB5nVVvmFsvSdExz408",
+      track: "",
+      genre: "classical",
+      market: "ES",
+    },
+    //joji run
+    {
+      artist: "3MZsBdqDrRTJihTHQrO6Dq",
+      track: "6p8eEdiZLKJH8tcjGZuNTK",
+      genre: "alternative%20r%26b",
       market: "ES",
     },
     //jon bellion, all time low
@@ -126,11 +203,46 @@ export const getRandomSeed = async () => {
       genre: "r%26b",
       market: "ES",
     },
+    //kailee morgue, black sheep
+    {
+      artist: "245PKF3hKjtxJKIG153kF0",
+      track: "1HVrRO2uuCl3PslkOKEdjE",
+      genre: "alt%20z",
+      market: "ES",
+    },
+    //kailee morgue, fuck you
+    {
+      artist: "245PKF3hKjtxJKIG153kF0",
+      track: "3jmEsXBxrm4aKu2hC0TaAy",
+      genre: "indie%20pop",
+      market: "ES",
+    },
     //kenny hoopla, estella
     {
       artist: "5ObBtv5VunwwhQaXXnUrsM",
       track: "4v2Bq0xDB7uNN73I5b44Du",
       genre: "modern%20rock",
+      market: "ES",
+    },
+    //kero kero bonito
+    {
+      artist: "6OqhFYFJDnBBHas02HopPT",
+      track: "3AaiEsiqHO2ylnnOdWninE",
+      genre: "art%20pop",
+      market: "ES",
+    },
+    //lil nas x, montero
+    {
+      artist: "7jVv8c5Fj3E9VhNjxT4snq",
+      track: "1SC5rEoYDGUK4NfG82494W",
+      genre: "pop%20rap",
+      market: "ES",
+    },
+    //lil peep, beamer boy
+    {
+      artist: "2kCcBybjl3SAtIcwdWpUe3",
+      track: "7hf89cT5FEmLV5E9fjrjG7",
+      genre: "emo%20rap",
       market: "ES",
     },
     //lolo zouai, caffeine
@@ -154,11 +266,25 @@ export const getRandomSeed = async () => {
       genre: "country",
       market: "ES",
     },
+    //lustra, scotty doesnt know
+    {
+      artist: "3IJ770I1QPmwVp7yug0eJ4",
+      track: "1LkoYGxmYpO6QSEvY5C0Zl",
+      genre: "punk",
+      market: "ES",
+    },
     //lxst, last time
     {
       artist: "2vxh38hZKAV0DlSpnv7cqT",
       track: "2nYbkkGVP8jK2ER1RYOOm4",
       genre: "emo%20rap",
+      market: "ES",
+    },
+    //miki fiki, the first time
+    {
+      artist: "1O1r2qVtIFqlTJoB4jsJKd",
+      track: "2A0fhBGmHrrQ1kMQ4QpIjO",
+      genre: "nashville%20indie",
       market: "ES",
     },
     //negative xp, Scott Pilgrim
@@ -175,6 +301,13 @@ export const getRandomSeed = async () => {
       genre: "bluegrass,country",
       market: "ES",
     },
+    //panucci's pizza, naruto themed sexting
+    {
+      artist: "5GLpYMkUSUNq5kLLeBovSi",
+      track: "3yoGVIY5OrRIBvNA9PYOS7",
+      genre: "lo-fi%20indie",
+      market: "ES",
+    },
     //poor man's poison, feed the machine
     {
       artist: "0YHgnSkV3S5mvSSCTRWDi5",
@@ -189,6 +322,27 @@ export const getRandomSeed = async () => {
       genre: "folk",
       market: "ES",
     },
+    //pyotr tchaikovsky, six pieces
+    {
+      artist: "3MKCzCnpzw3TjUYs2v7vDA",
+      track: "1BbQIyPnuhVIlJEqPcY3Ug",
+      genre: "classical",
+      market: "ES",
+    },
+    //rejjie snow, egyptian luvr
+    {
+      artist: "3lLHpTOJ11tWiUNGYN14gt",
+      track: "78DC9wd9Qrikw4jWllFAvM",
+      genre: "indie%20soul",
+      market: "ES",
+    },
+    //shinigami lite brite
+    {
+      artist: "0ntNwPE7MYnKrTh59tU2BA",
+      track: "4nHsQ4S2gIrSJMitQ2y05d",
+      genre: "sad%20rap",
+      market: "ES",
+    },
     //slush puppy, juliette
     {
       artist: "58eJhHRICp87T2IFcP0bYh",
@@ -201,6 +355,20 @@ export const getRandomSeed = async () => {
       artist: "58eJhHRICp87T2IFcP0bYh",
       track: "6GVW5k7CvUbUCt10bSUIIW",
       genre: "glitchcore",
+      market: "ES",
+    },
+    //s0cliche, ted bundy
+    {
+      artist: "6VFh5MDegSpfTMvGQ4RGaO",
+      track: "181eeiSLgxjV7LXz4F83HX",
+      genre: "emo%20rap",
+      market: "ES",
+    },
+    //superorganism congradulations
+    {
+      artist: "0Wkm45quqfx3NepJpXDvwE",
+      track: "0Pbvf8in42PTcbbv6EKKcG",
+      genre: "art%20pop",
       market: "ES",
     },
     //the backseat lovers, kilby girl
@@ -224,11 +392,25 @@ export const getRandomSeed = async () => {
       genre: "shanty",
       market: "ES",
     },
+    //the lumineers, ophelia
+    {
+      artist: "16oZKvXb6WkQlVAjwo2Wbg",
+      track: "3d8y0t70g7hw2FOWl9Z4Fm",
+      genre: "folk-pop",
+      market: "ES",
+    },
     //tm88, slayerr
     {
       artist: "5RMUeKq0dZxg9RHE1f0B9P",
       track: "5X2I1TVUkchLBggRTCMYem",
       genre: "trap",
+      market: "ES",
+    },
+    //tobi lou, darling
+    {
+      artist: "4T8NIfZmVY6TJFqVzN6X49",
+      track: "0eGrwX4kf5sV1faR5tZDp3",
+      genre: "alternative%20r%26b",
       market: "ES",
     },
     //turnpike troubadours
@@ -259,11 +441,53 @@ export const getRandomSeed = async () => {
       genre: "abstract%20hip%20hop",
       market: "ES",
     },
+    //wintertime, u times 2
+    {
+      artist: "1XNVFs9EIrPqDsmARzDKR7",
+      track: "14riV39U9xWcaDEKlaRi1L",
+      genre: "underground%20hip%20hop",
+      market: "ES",
+    },
+    //wintertime, wintertime
+    {
+      artist: "1XNVFs9EIrPqDsmARzDKR7",
+      track: "5PhaNiFYyQSAPWkTFVwjMb",
+      genre: "vapor%20trap",
+      market: "ES",
+    },
     //wet, larabar
     {
       artist: "2i9uaNzfUtuApAjEf1omV8",
       track: "40AqvlNZuYdCyo9gbCzOlw",
       genre: "indie",
+      market: "ES",
+    },
+    //xxxtentacion, jocelyn flores
+    {
+      artist: "15UsOTVnJzReFVN1VCnxy4",
+      track: "7m9OqQk4RVRkw9JJdeAw96",
+      genre: "emo%20rap",
+      market: "ES",
+    },
+    //xxxtentacion, SAD!
+    {
+      artist: "15UsOTVnJzReFVN1VCnxy4",
+      track: "3ee8Jmje8o58CHK66QrVC2",
+      genre: "emo%20rap",
+      market: "ES",
+    },
+    //young thug, wyclef jean
+    {
+      artist: "50co4Is1HCEo8bhOyUWKpn",
+      track: "55OdqrG8WLmsYyY1jijD9b",
+      genre: "atl%20hip%20hop",
+      market: "ES",
+    },
+    //yung pinch, nightmares
+    {
+      artist: "61qMnYXa1GxSBoV3IiYKjZ",
+      track: "0qy1xNhQvnRhEpvKxdXYUR",
+      genre: "vapor%20trap",
       market: "ES",
     },
   ];
