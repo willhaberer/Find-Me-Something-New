@@ -26,12 +26,12 @@ function Spotify() {
     event.preventDefault();
 
     if (data) {
-      const userId = data.me._id;
-      console.log(userId);
+      const userID = data.me._id;
 
       try {
-        const data = await updateSongsFound(userId);
-        console.log(data);
+        const { data } = await updateSongsFound({
+          variables: { userID },
+        });
       } catch (err) {
         console.error(err);
       }
@@ -44,7 +44,7 @@ function Spotify() {
       const pop = 18;
 
       if (!token) {
-        throw new Error("something went wrong!");
+        throw new Error("no token!");
       }
 
       const result = await getRecTrack(token, pop);

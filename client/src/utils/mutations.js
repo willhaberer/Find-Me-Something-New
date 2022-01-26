@@ -12,6 +12,15 @@ export const LOGIN_USER = gql`
   }
 `;
 
+export const UPDATE_SONGS_FOUND = gql`
+  mutation updateSongsFound($userID: String!) {
+    updateSongsFound(userID: $userID) {
+      username
+      songsFound
+    }
+  }
+`;
+
 export const ADD_USER = gql`
   mutation addUser(
     $username: String!
@@ -62,15 +71,6 @@ export const REMOVE_SPOTIFY_SONG = gql`
         link
         title
       }
-    }
-  }
-`;
-
-export const UPDATE_SONGS_FOUND = gql`
-  mutation updateSongsFound($userId: String!) {
-    updateSongsFound(userId: $userId) {
-      username
-      songsfound
     }
   }
 `;

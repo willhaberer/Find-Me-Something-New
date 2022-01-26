@@ -59,17 +59,23 @@ const resolvers = {
         return updatedUser;
       }
     },
-    updateSongsFound: async (parent, userId, context) => {
-      if (userId) {
-        const currentCount = User.findOne({ _id: userId }).songsFound;
-        const newCount = currentCount + 1;
-        const updatedUser = await User.findOneAndUpdate(
-          { _id: userID },
-          { $pull: { songsFound: { songsFound: newCount } } },
-          { new: true }
-        );
-        return updatedUser;
-      }
+    // updateSongsFound: async (parent, { userID }) => {
+    //   const currentUser = User.findOne({ _id: userID });
+    //   console.log(currentUser);
+    //   return currentUser;
+    // },
+    updateSongsFound: async (parent, { userID }) => {
+      const updatedUser = await User.findOneAndUpdate(
+        { _id: userID },
+        { $inc: { songsFound: 1 } }
+      ).exec(function (err, db_res) {
+        if (err) {
+          throw err;
+        } else {
+          console.log(db_res);
+          return updatedUser;
+        }
+      });
     },
   },
 };
