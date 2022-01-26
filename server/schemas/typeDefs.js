@@ -7,11 +7,10 @@ const typeDefs = gql`
     email: String
     spotifySongCount: Int
     songsFound: Int
-    savedSpotifySongs: [SpotifySong]
+    savedSpotifySongs: [String]
   }
   type SpotifySong {
-    _id: ID
-    artists: [String]
+    artist: String
     trackId: String
     link: String
     title: String
@@ -22,7 +21,7 @@ const typeDefs = gql`
   }
 
   input SavedSpotifySongInput {
-    artists: [String]
+    artist: String
     trackId: String
     link: String
     title: String
@@ -43,7 +42,6 @@ const typeDefs = gql`
       songsFound: Int!
     ): Auth
     saveSpotifySong(spotifyTrackId: String!): User
-    removeSpotifySong(spotifySongId: String!): User
     updateSongsFound(userID: String!): User
   }
 `;

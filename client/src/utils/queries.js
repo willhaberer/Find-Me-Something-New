@@ -7,12 +7,7 @@ export const GET_ME = gql`
       username
       email
       songsFound
-      savedSpotifySongs {
-        artists
-        trackId
-        title
-        link
-      }
+      savedSpotifySongs
     }
   }
 `;

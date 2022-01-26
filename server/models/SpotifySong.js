@@ -1,9 +1,9 @@
 const { Schema } = require("mongoose");
 
 const songSchema = new Schema({
-  artists: {
+  artist: {
     type: String,
-    required: true.valueOf,
+    required: true,
   },
   trackId: {
     type: String,
