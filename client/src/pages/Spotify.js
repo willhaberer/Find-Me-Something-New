@@ -64,6 +64,7 @@ function Spotify() {
         setTrackPop(trackData.tracks[0].popularity);
         setReleaseDate(trackData.tracks[0].album.release_date);
         setArtist(songData.artist);
+
         const inter =
           "https://open.spotify.com/embed/track/" + songData.trackId;
         setEmbedCode(inter);
@@ -240,6 +241,7 @@ function Spotify() {
         variables: { spotifyTrackId },
       });
       console.log(data);
+      alert("Success Song Saved!");
     } catch (err) {
       console.error(err);
     }
