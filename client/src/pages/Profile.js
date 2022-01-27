@@ -22,7 +22,11 @@ const Profile = () => {
     const newIndex = songIndex + 1;
     const embedInter = userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
-    setSongIndex(newIndex);
+    if (newIndex === userData.savedSpotifySongs.length) {
+      setSongIndex(0);
+    } else {
+      setSongIndex(newIndex);
+    }
   };
 
   const handlePreviousSong = async () => {

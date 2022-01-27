@@ -241,6 +241,7 @@ function Spotify() {
         variables: { spotifyTrackId },
       });
       console.log(data);
+      alert("Success Song Saved!");
     } catch (err) {
       console.error(err);
     }
