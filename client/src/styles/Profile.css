@@ -2,7 +2,28 @@
   position: absolute;
 }
 
-#welcome {
+#welcome,
+#savedSongs {
   position: relative;
   left: 1em;
+}
+
+#leftArrow,
+#rightArrow,
+#view {
+  color: white;
+  position: relative;
+  left: 1em;
+  cursor: pointer;
+  background: transparent;
+  border: solid white 0.2em;
+  font-size: 2em;
+}
+
+#spotifyPlayer {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
