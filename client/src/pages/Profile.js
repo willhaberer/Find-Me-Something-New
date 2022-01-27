@@ -31,10 +31,14 @@ const Profile = () => {
 
   const handlePreviousSong = async () => {
     const index = songIndex;
-    const newIndex = songIndex - 1;
+    const newIndex = index - 1;
     const embedInter = userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
-    setSongIndex(newIndex);
+    if (newIndex === -1) {
+      setSongIndex(userData.savedSpotifySongs.length - 1);
+    } else {
+      setSongIndex(newIndex);
+    }
   };
 
   const handleView = async () => {
