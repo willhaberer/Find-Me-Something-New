@@ -10,7 +10,7 @@ import "../styles/Profile.css";
 const Profile = () => {
   //useState
   const [embedCode, setEmbedCode] = useState("initial");
-  const [songIndex, setSongIndex] = useState("0");
+  const [songIndex, setSongIndex] = useState(0);
 
   const { data } = useQuery(GET_ME);
 
@@ -19,15 +19,18 @@ const Profile = () => {
 
   const handleNextSong = async () => {
     const index = songIndex;
+    const newIndex = songIndex + 1;
     const embedInter = userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
-    console.log(embedCode);
+    setSongIndex(newIndex);
   };
 
   const handleView = async () => {
     const index = songIndex;
+    const newIndex = songIndex + 1;
     const embedInter = userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
+    setSongIndex(newIndex);
   };
 
   if (!userData?.username) {
