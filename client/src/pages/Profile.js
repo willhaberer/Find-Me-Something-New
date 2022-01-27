@@ -25,6 +25,14 @@ const Profile = () => {
     setSongIndex(newIndex);
   };
 
+  const handlePreviousSong = async () => {
+    const index = songIndex;
+    const newIndex = songIndex - 1;
+    const embedInter = userData.savedSpotifySongs[index];
+    setEmbedCode(embedInter);
+    setSongIndex(newIndex);
+  };
+
   const handleView = async () => {
     const index = songIndex;
     const newIndex = songIndex + 1;
@@ -73,7 +81,9 @@ const Profile = () => {
           </h1>
         </div>
         <div id="songPlayer">
-          <button id="leftArrow">Back</button>
+          <button id="leftArrow" onClick={handlePreviousSong}>
+            Previous
+          </button>
           <div id="songAndInfo">
             <iframe
               src={embedCode}
