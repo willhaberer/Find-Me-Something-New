@@ -12,7 +12,7 @@ This application was built to showcase a full stack MERN application as well as 
 
 ## Usage
 
-1. Find Me Something New will be availible soon!
+1. Find Me Something New is availible at https://fmsn.herokuapp.com/
 
 ## Mock-Up
 
