@@ -58,7 +58,6 @@ const resolvers = {
         if (err) {
           throw err;
         } else {
-          console.log(db_res);
           return updatedUser;
         }
       });
