@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  process.env.REACT_APP_MONGODB_URI || "mongodb://localhost/fmsn",
+  "mongodb+srv://fmsn:oqlIcIACAQrIh85G@cluster0.lq4uh.mongodb.net/fmsnData?retryWrites=true&w=majority" ||
+    "mongodb://localhost/fmsn",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
