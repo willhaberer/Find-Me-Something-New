@@ -133,6 +133,13 @@ export const getRandomSeed = async () => {
       genre: "pop",
       market: "ES",
     },
+    //dijon, stranger
+    {
+      artist: "0knGpCTbmG4ctl1wzYRZs4",
+      track: "2TfcFXI1FOsO5HCz4X6uRk",
+      genre: "bedroom%20soul",
+      market: "ES",
+    },
     //evisbeats, can you see it, japanese market
     {
       artist: "3dkhk6RTgOerN0NQEmt8Nc",
@@ -147,6 +154,20 @@ export const getRandomSeed = async () => {
       genre: "j-rap",
       market: "ES",
     },
+    //felly, sun and good feelin
+    {
+      artist: "2848adRcxvgWNRcz1g1tQD",
+      track: "1uquWTdgoGJ02IOxzr4Zwu",
+      genre: "underground%20hip%20hop",
+      market: "ES",
+    },
+    //fleet foxes, montezuma
+    {
+      artist: "4EVpmkEwrLYEg6jIsiPMIb",
+      track: "5Civg4JEWHLe2gqMG5vW6E",
+      genre: "chamber%20pop",
+      market: "ES",
+    },
     //florence and the machine, never let me go
     {
       artist: "1moxjboGR7GNWYIMWsRjgG",
@@ -159,6 +180,13 @@ export const getRandomSeed = async () => {
       artist: "23EA28263XvtIrXuySX6oI",
       track: "0VaIsQoIQY10uxBrOyZ5cQ",
       genre: "alternative%20r%26b",
+      market: "ES",
+    },
+    //g flip, hyperfine
+    {
+      artist: "4SdIXLzfabqU61iK7SnKAU",
+      track: "4iqVQrt8pmzSn8VFkC8jAP",
+      genre: "australian%20indie",
       market: "ES",
     },
     //girlfriends, jessica
@@ -308,6 +336,13 @@ export const getRandomSeed = async () => {
       genre: "lo-fi%20indie",
       market: "ES",
     },
+    //ph-1, homebody
+    {
+      artist: "2u7CP5T30c8ctenzXgEV1W",
+      track: "766oOBLBihuZjYuL27CUQM",
+      genre: "lo-fi%20indie",
+      market: "ES",
+    },
     //poor man's poison, feed the machine
     {
       artist: "0YHgnSkV3S5mvSSCTRWDi5",
@@ -329,11 +364,39 @@ export const getRandomSeed = async () => {
       genre: "classical",
       market: "ES",
     },
+    //rei ami, do it right
+    {
+      artist: "6U1dV7aL68N7Gb0Naq34V5",
+      track: "6T3l1Ov2VpZdmqN7PLcMxP",
+      genre: "escape%20room",
+      market: "ES",
+    },
+    //rei ami, snowcone
+    {
+      artist: "6U1dV7aL68N7Gb0Naq34V5",
+      track: "00P1RGdQvHcyuW1ililPdI",
+      genre: "alt%20z",
+      market: "ES",
+    },
     //rejjie snow, egyptian luvr
     {
       artist: "3lLHpTOJ11tWiUNGYN14gt",
       track: "78DC9wd9Qrikw4jWllFAvM",
       genre: "indie%20soul",
+      market: "ES",
+    },
+    //rozet, rigamarole
+    {
+      artist: "4LyGWqMGeTHfJXbKQmk6YY",
+      track: "1CFlJQumKNMHB9o634moJ9",
+      genre: "chill%20pop",
+      market: "ES",
+    },
+    //saiah, cold
+    {
+      artist: "5ZPYeVqoWNuukwfarvkyJX",
+      track: "14FdeSXWFUosFEevBfOyPb",
+      genre: "emo%20rap",
       market: "ES",
     },
     //shinigami lite brite
@@ -364,11 +427,39 @@ export const getRandomSeed = async () => {
       genre: "emo%20rap",
       market: "ES",
     },
+    //spill tab, pistolwhip
+    {
+      artist: "3qqkHeEhezlIaNj1vFYH2r",
+      track: "5me5yFJlnKZr2spcxSbCTW",
+      genre: "indie%20pop",
+      market: "ES",
+    },
+    //sub urban. cradles
+    {
+      artist: "7gXb99Sf9nNmpNYeAgIQFG",
+      track: "1y4jsQt7MjnZhiD1L6qFBC",
+      genre: "modern%20indie%20pop",
+      market: "ES",
+    },
+    //sueco, primadonna
+    {
+      artist: "4iDroUFo89Y7YBsdDTBmTD",
+      track: "2mM2XCzLaXtiKbqfFqtZOh",
+      genre: "cali%20rap",
+      market: "ES",
+    },
     //superorganism congradulations
     {
       artist: "0Wkm45quqfx3NepJpXDvwE",
       track: "0Pbvf8in42PTcbbv6EKKcG",
       genre: "art%20pop",
+      market: "ES",
+    },
+    //syko, brooklynbloodpop
+    {
+      artist: "08ZqXO40nMrhBoGma4kls2",
+      track: "7K9Z3yFNNLv5kwTjQYGjnu",
+      genre: "glitchcore",
       market: "ES",
     },
     //the backseat lovers, kilby girl
@@ -383,6 +474,13 @@ export const getRandomSeed = async () => {
       artist: "6p2HnfM955TI1bX34dkLnI",
       track: "74f0dpqHhTeTJzs4pmZ1yq",
       genre: "slc%20indie",
+      market: "ES",
+    },
+    //the glove, mr aplhabet says
+    {
+      artist: "75XeVX3ggxZzH9lS2UTNJa",
+      track: "2r8SMYcuQJOflEykRopW8m",
+      genre: "dream%20pop",
       market: "ES",
     },
     //the longest johns, wellerman
@@ -476,6 +574,13 @@ export const getRandomSeed = async () => {
       genre: "emo%20rap",
       market: "ES",
     },
+    //yameii online,floozie
+    {
+      artist: "141ww9EOPLPetF8mMt1gKF",
+      track: "2ZnBZWmkgLax15pVOclihg",
+      genre: "glitchcore",
+      market: "ES",
+    },
     //young thug, wyclef jean
     {
       artist: "50co4Is1HCEo8bhOyUWKpn",
@@ -491,6 +596,6 @@ export const getRandomSeed = async () => {
       market: "ES",
     },
   ];
-
+  console.log(seedList.length);
   return seedList[Math.floor(Math.random() * seedList.length)];
 };
