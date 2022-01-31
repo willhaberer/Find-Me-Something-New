@@ -18,6 +18,7 @@ function getRandomQuery() {
     "fix",
     "IMG",
   ];
+
   return queryList[Math.floor(Math.random() * queryList.length)];
 }
 
@@ -42,6 +43,7 @@ export const getYoutubeVidStats = async (id) => {
 //spotify api
 const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
+
 export const getSpotifyToken = async () => {
   const auth = base64.encode(clientId + ":" + clientSecret);
   const response = await fetch("https://accounts.spotify.com/api/token", {
