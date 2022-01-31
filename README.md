@@ -20,7 +20,7 @@ This application was built to showcase a full stack MERN application as well as 
 
 ## Credits
 
-<a href="https://github.com/willhaberer" targer="_blank">Will Haberer</a>
+<a href="https://github.com/willhaberer" target="_blank">Will Haberer</a>
 
 ## License
 
