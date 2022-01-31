@@ -3,41 +3,41 @@ import { getRandomSeed } from "./Seed";
 var base64 = require("base-64");
 require("dotenv").config();
 
-// function getRandomQuery() {
-//   var queryList = [
-//     "sailing",
-//     "basketball",
-//     "hockey",
-//     "weaving",
-//     "sewing",
-//     "cinnamon",
-//     "tuna",
-//     "shanty",
-//     "stroll",
-//     "candle",
-//     "fix",
-//     "IMG",
-//   ];
-//   return queryList[Math.floor(Math.random() * queryList.length)];
-// }
+function getRandomQuery() {
+  var queryList = [
+    "sailing",
+    "basketball",
+    "hockey",
+    "weaving",
+    "sewing",
+    "cinnamon",
+    "tuna",
+    "shanty",
+    "stroll",
+    "candle",
+    "fix",
+    "IMG",
+  ];
+  return queryList[Math.floor(Math.random() * queryList.length)];
+}
 
-// export const getVidId = async () => {
-//   const maxresults = 50;
-//   const query = getRandomQuery();
-//   const response = await fetch(
-//     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${maxresults}&q=${query}&order=viewCount&key=[key]`
-//   );
+export const getVidId = async () => {
+  const maxresults = 50;
+  const query = getRandomQuery();
+  const response = await fetch(
+    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${maxresults}&q=${query}&order=viewCount&key=[key]`
+  );
 
-//   return response;
-// };
+  return response;
+};
 
-// export const getYoutubeVidStats = async (id) => {
-//   const response = await fetch(
-//     `https://youtube.googleapis.com/youtube/v3/search?part=statistics&id=${id}&key=[key]`
-//   );
+export const getYoutubeVidStats = async (id) => {
+  const response = await fetch(
+    `https://youtube.googleapis.com/youtube/v3/search?part=statistics&id=${id}&key=[key]`
+  );
 
-//   return response;
-// };
+  return response;
+};
 
 //spotify api
 const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
