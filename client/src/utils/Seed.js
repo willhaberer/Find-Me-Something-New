@@ -892,6 +892,6 @@ export const getRandomSeed = async () => {
       market: "ES",
     },
   ];
-  console.log(seedList.length);
+
   return seedList[Math.floor(Math.random() * seedList.length)];
 };
