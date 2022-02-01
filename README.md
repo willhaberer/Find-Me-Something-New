@@ -12,7 +12,7 @@ This application was built to showcase a full stack MERN application as well as 
 
 ## Usage
 
-1. Find Me Something New is availible <a href="https://fmsn.herokuapp.com/" target="_blank">Here!</a>
+1. Find Me Something New is available <a href="https://fmsn.herokuapp.com/" target="_blank">Here!</a>
 
 ## Mock-Up
 
