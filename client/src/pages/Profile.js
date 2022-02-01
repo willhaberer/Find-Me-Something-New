@@ -106,7 +106,26 @@ const Profile = () => {
     );
   }
 
-  if (embedCode === "initial") {
+  if (embedCode === "initial" && userData.songsFound === 0) {
+    return (
+      <div id="profilePage">
+        <div id="welcome">
+          <h1 id="welcome">Welcome Back {userData.username}!</h1>
+          <h3 id="welcome">You Have Found: [{userData.songsFound}] Songs!</h3>
+        </div>
+        <br></br>
+        <div id="savedSongs">
+          <h1 id="savedSongs">
+            You have Saved {userData.spotifySongCount} Songs, Save Songs To
+            Listen to Them Here!
+          </h1>
+          <button id="removeUser" onClick={handleRemoveUser}>
+            Delete Your Account
+          </button>
+        </div>
+      </div>
+    );
+  } else if (embedCode === "initial") {
     return (
       <div id="profilePage">
         <div id="welcome">
