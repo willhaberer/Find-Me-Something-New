@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/react-hooks";
 
 import { GET_ME } from "../utils/queries";
-import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
+import { REMOVE_SPOTIFY_SONG, REMOVE_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
@@ -16,6 +16,7 @@ const Profile = () => {
 
   const { data } = useQuery(GET_ME);
   const [removeSong] = useMutation(REMOVE_SPOTIFY_SONG);
+  const [removeUser] = useMutation(REMOVE_USER);
 
   const userData = data?.me || {};
 
@@ -53,7 +54,6 @@ const Profile = () => {
   };
 
   const handleRemoveSong = async () => {
-    console.log(embedCode);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -68,6 +68,31 @@ const Profile = () => {
       console.log(data);
       alert("Success Song Removed!");
       window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleRemoveUser = async () => {
+    console.log(userData._id);
+
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      alert("Must be Signed in to Remove Songs!");
+      return;
+    }
+
+    const userId = userData._id;
+
+    try {
+      const { data } = await removeUser({
+        variables: { userId },
+      });
+      console.log(data);
+      alert("We are Sorry to See you Go!");
+      localStorage.removeItem("id_token");
+      window.location.assign("/");
     } catch (err) {
       console.error(err);
     }
@@ -95,6 +120,9 @@ const Profile = () => {
           </h1>
           <button id="view" onClick={handleView}>
             View your Saved Songs
+          </button>
+          <button id="removeUser" onClick={handleRemoveUser}>
+            Delete Your Account
           </button>
         </div>
       </div>
@@ -136,6 +164,9 @@ const Profile = () => {
             Next
           </button>
           <br></br>
+          <button id="removeUser" onClick={handleRemoveUser}>
+            Delete Your Account
+          </button>
         </div>
       </div>
     );

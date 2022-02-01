@@ -62,3 +62,12 @@ export const REMOVE_SPOTIFY_SONG = gql`
     }
   }
 `;
+
+export const REMOVE_USER = gql`
+  mutation removeUser($userId: String!) {
+    removeUser(userId: $userId) {
+      username
+      email
+    }
+  }
+`;
