@@ -49,6 +49,17 @@ const resolvers = {
       }
       throw new AuthenticationError("Incorrect credentials!");
     },
+    removeSpotifySong: async (parent, { spotifyTrackId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedSpotifySongs: spotifyTrackId } },
+          { new: true }
+        );
+        return updatedUser;
+      }
+      throw new AuthenticationError("Incorrect credentials!");
+    },
 
     updateSongsFound: async (parent, { userID }) => {
       const updatedUser = await User.findOneAndUpdate(

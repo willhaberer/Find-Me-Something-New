@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-import { useQuery } from "@apollo/react-hooks";
+import { useQuery, useMutation } from "@apollo/react-hooks";
 
 import { GET_ME } from "../utils/queries";
-// import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
+import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
+
+import Auth from "../utils/auth";
 
 import "../styles/Profile.css";
 
@@ -13,14 +15,15 @@ const Profile = () => {
   const [songIndex, setSongIndex] = useState(0);
 
   const { data } = useQuery(GET_ME);
+  const [removeSong] = useMutation(REMOVE_SPOTIFY_SONG);
 
   const userData = data?.me || {};
-  console.log(userData);
 
   const handleNextSong = async () => {
     const index = songIndex;
     const newIndex = songIndex + 1;
     const embedInter = userData.savedSpotifySongs[index];
+    console.log(embedInter);
     setEmbedCode(embedInter);
     if (newIndex === userData.savedSpotifySongs.length) {
       setSongIndex(0);
@@ -47,6 +50,27 @@ const Profile = () => {
     const embedInter = userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
     setSongIndex(newIndex);
+  };
+
+  const handleRemoveSong = async () => {
+    console.log(embedCode);
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      alert("Must be Signed in to Remove Songs!");
+      return;
+    }
+    const spotifyTrackId = embedCode;
+    try {
+      const { data } = await removeSong({
+        variables: { spotifyTrackId },
+      });
+      console.log(data);
+      alert("Success Song Removed!");
+      window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   if (!userData?.username) {
@@ -104,6 +128,9 @@ const Profile = () => {
               id="spotifyPlayer"
             ></iframe>
           </div>
+          <button id="removeBtn" onClick={handleRemoveSong}>
+            Remove Song from Profile
+          </button>
           <br></br>
           <button id="rightArrow" onClick={handleNextSong}>
             Next

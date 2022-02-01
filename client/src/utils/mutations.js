@@ -54,17 +54,11 @@ export const SAVE_SPOTIFY_SONG = gql`
 `;
 
 export const REMOVE_SPOTIFY_SONG = gql`
-  mutation removeSpotifySong($trackId: String!) {
-    removeSpotifySong(trackId: $trackId) {
+  mutation removeSpotifysong($spotifyTrackId: String!) {
+    removeSpotifySong(spotifyTrackId: $spotifyTrackId) {
       username
       email
       spotifySongCount
-      savedSpotifySongs {
-        artists
-        trackId
-        link
-        title
-      }
     }
   }
 `;
