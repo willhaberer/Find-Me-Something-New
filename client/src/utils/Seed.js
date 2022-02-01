@@ -140,6 +140,13 @@ export const getRandomSeed = async () => {
       genre: "emo",
       market: "ES",
     },
+    //brent faiyaz, trust
+    {
+      artist: "3tlXnStJ1fFhdScmQeLpuG",
+      track: "0oufSLnKQDoBFX5mgkDCgR",
+      genre: "dmv%20rap",
+      market: "ES",
+    },
     //call me karizma, frank ocean
     {
       artist: "5fENlrINIVP0gJOtKxvORt",
@@ -468,6 +475,20 @@ export const getRandomSeed = async () => {
       genre: "emo%20rap",
       market: "ES",
     },
+    //maasho, fresh air
+    {
+      artist: "1JREmglx633MGQB73njWtE",
+      track: "1NFNa1nGPnwdmcHO5XQ7Ui",
+      genre: "chill%20r%26b",
+      market: "ES",
+    },
+    //maggie lindemann, scissors
+    {
+      artist: "0uGk2czvcpWQA383Im6ajf",
+      track: "3FYFaLFmpwKFb5MNAvoHH0",
+      genre: "dark%20pop",
+      market: "ES",
+    },
     //marcos g, dancefloor
     {
       artist: "3O2UFvuhmgSDH3q6miqELN",
@@ -524,11 +545,18 @@ export const getRandomSeed = async () => {
       genre: "malaysian%20hip%20hop",
       market: "ES",
     },
+    //oasis, wonderwall
+    {
+      artist: "2DaxqgrOhkeH0fpeiQq2f4",
+      track: "7ygpwy2qP3NbrxVkHvUhXY",
+      genre: "beatlesque",
+      market: "ES",
+    },
     //old crow medicine show, wagon wheel
     {
       artist: "4DBi4EYXgiqbkxvWUXUzMi",
       track: "359krpyCKcFF8SFvqWES9L",
-      genre: "bluegrass,country",
+      genre: "bluegrass",
       market: "ES",
     },
     //panucci's pizza, naruto themed sexting
