@@ -18,7 +18,6 @@ const Profile = () => {
   const [removeSong] = useMutation(REMOVE_SPOTIFY_SONG);
 
   const userData = data?.me || {};
-  console.log(userData);
 
   const handleNextSong = async () => {
     const index = songIndex;
