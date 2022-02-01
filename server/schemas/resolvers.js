@@ -26,7 +26,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    removeUser: async (parent, args, context) => {
+    removeUser: async (parent, { userId }, context) => {
       if (context.user) {
         const deletedUser = User.findOneAndDelete({ _id: context.user._id });
         return deletedUser;

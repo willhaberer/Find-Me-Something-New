@@ -41,7 +41,7 @@ const typeDefs = gql`
       password: String!
       songsFound: Int!
     ): Auth
-    removeUser(): User
+    removeUser(userId: String!): User
     saveSpotifySong(spotifyTrackId: String!): User
     removeSpotifySong(spotifyTrackId: String!): User
     updateSongsFound(userID: String!): User
