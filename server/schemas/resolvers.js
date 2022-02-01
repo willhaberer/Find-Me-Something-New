@@ -26,6 +26,13 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    deleteUser: async (parent, args, context) => {
+      if (context.user) {
+        const deletedUser = User.findOneAndDelete({ _id: context.user._id });
+        return deletedUser;
+      }
+      throw new AuthenticationError("Incorrect credentials!");
+    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
