@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/react-hooks";
 
 import { GET_ME } from "../utils/queries";
-import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
+import { REMOVE_SPOTIFY_SONG, REMOVE_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
@@ -16,6 +16,7 @@ const Profile = () => {
 
   const { data } = useQuery(GET_ME);
   const [removeSong] = useMutation(REMOVE_SPOTIFY_SONG);
+  const [removeUser] = useMutation(REMOVE_USER);
 
   const userData = data?.me || {};
 
@@ -73,6 +74,11 @@ const Profile = () => {
     }
   };
 
+  const handleRemoveUser = async () => {
+    console.log(userData._id);
+    alert("We are Sorry to See you Go!");
+  };
+
   if (!userData?.username) {
     return (
       <div id="profilePage">
@@ -95,6 +101,9 @@ const Profile = () => {
           </h1>
           <button id="view" onClick={handleView}>
             View your Saved Songs
+          </button>
+          <button id="removeUser" onClick={handleRemoveUser}>
+            Delete Your Account
           </button>
         </div>
       </div>
@@ -136,6 +145,9 @@ const Profile = () => {
             Next
           </button>
           <br></br>
+          <button id="removeUser" onClick={handleRemoveUser}>
+            Delete Your Account
+          </button>
         </div>
       </div>
     );

@@ -11,7 +11,8 @@
 #leftArrow,
 #rightArrow,
 #view,
-#removeBtn {
+#removeBtn,
+#removeUser {
   color: white;
   position: relative;
   left: 1em;
