@@ -68,6 +68,7 @@ const Profile = () => {
       });
       console.log(data);
       alert("Success Song Removed!");
+      window.location.reload();
     } catch (err) {
       console.error(err);
     }
