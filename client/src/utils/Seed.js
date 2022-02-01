@@ -105,6 +105,20 @@ export const getRandomSeed = async () => {
       genre: "electropop",
       market: "ES",
     },
+    //bibi, bad sad and mad
+    {
+      artist: "6UbmqUEgjLA6jAcXwbM1Z9",
+      track: "0zPbUxvYRlCGwruakkXPLI",
+      genre: "korean%20r%26b",
+      market: "ES",
+    },
+    //bibi, kazino
+    {
+      artist: "6UbmqUEgjLA6jAcXwbM1Z9",
+      track: "245onUPHGD1DYuiacxTuW0",
+      genre: "korean%20hip%20hop",
+      market: "ES",
+    },
     //billy joel, vienna
     {
       artist: "6zFYqv1mOsgBRQbae3JJ9e",
@@ -124,6 +138,27 @@ export const getRandomSeed = async () => {
       artist: "4kqFrZkeqDfOIEqTWqbOOV",
       track: "6GVW5k7CvUbUCt10bSUIIW",
       genre: "emo",
+      market: "ES",
+    },
+    //brent faiyaz, trust
+    {
+      artist: "3tlXnStJ1fFhdScmQeLpuG",
+      track: "0oufSLnKQDoBFX5mgkDCgR",
+      genre: "dmv%20rap",
+      market: "ES",
+    },
+    //call me karizma, frank ocean
+    {
+      artist: "5fENlrINIVP0gJOtKxvORt",
+      track: "1jKBiK0Yk6VCcBfJOgBUbs",
+      genre: "minnesota%20hip%20hop",
+      market: "ES",
+    },
+    //cavetown, juliet
+    {
+      artist: "2hR4h1Cao2ueuI7Cx9c7V8",
+      track: "45ROR8UMn60YEVQnDy0uVF",
+      genre: "indie%20pop",
       market: "ES",
     },
     //central cee, obsessed with you
@@ -419,6 +454,13 @@ export const getRandomSeed = async () => {
       genre: "country",
       market: "ES",
     },
+    //lund, fiction
+    {
+      artist: "5uLkZ7FWMTBUg1corQqdkR",
+      track: "31Z75ehoSqIwC1bsRESbKM",
+      genre: "sad%20rap",
+      market: "ES",
+    },
     //lustra, scotty doesnt know
     {
       artist: "3IJ770I1QPmwVp7yug0eJ4",
@@ -431,6 +473,20 @@ export const getRandomSeed = async () => {
       artist: "2vxh38hZKAV0DlSpnv7cqT",
       track: "2nYbkkGVP8jK2ER1RYOOm4",
       genre: "emo%20rap",
+      market: "ES",
+    },
+    //maasho, fresh air
+    {
+      artist: "1JREmglx633MGQB73njWtE",
+      track: "1NFNa1nGPnwdmcHO5XQ7Ui",
+      genre: "chill%20r%26b",
+      market: "ES",
+    },
+    //maggie lindemann, scissors
+    {
+      artist: "0uGk2czvcpWQA383Im6ajf",
+      track: "3FYFaLFmpwKFb5MNAvoHH0",
+      genre: "dark%20pop",
       market: "ES",
     },
     //marcos g, dancefloor
@@ -489,11 +545,18 @@ export const getRandomSeed = async () => {
       genre: "malaysian%20hip%20hop",
       market: "ES",
     },
+    //oasis, wonderwall
+    {
+      artist: "2DaxqgrOhkeH0fpeiQq2f4",
+      track: "7ygpwy2qP3NbrxVkHvUhXY",
+      genre: "beatlesque",
+      market: "ES",
+    },
     //old crow medicine show, wagon wheel
     {
       artist: "4DBi4EYXgiqbkxvWUXUzMi",
       track: "359krpyCKcFF8SFvqWES9L",
-      genre: "bluegrass,country",
+      genre: "bluegrass",
       market: "ES",
     },
     //panucci's pizza, naruto themed sexting
@@ -563,6 +626,13 @@ export const getRandomSeed = async () => {
       artist: "3lLHpTOJ11tWiUNGYN14gt",
       track: "78DC9wd9Qrikw4jWllFAvM",
       genre: "indie%20soul",
+      market: "ES",
+    },
+    //rina sawayama, xs
+    {
+      artist: "2KEqzdPS7M5YwGmiuPTdr5",
+      track: "1TWNKyNQOBfNUkWWs7FooF",
+      genre: "electropop",
       market: "ES",
     },
     //ryan caraveo, peanut butter waffles
@@ -708,6 +778,13 @@ export const getRandomSeed = async () => {
       artist: "6p2HnfM955TI1bX34dkLnI",
       track: "74f0dpqHhTeTJzs4pmZ1yq",
       genre: "slc%20indie",
+      market: "ES",
+    },
+    //the blossom, still with you
+    {
+      artist: "7lq7hz0Z6rG6v9zbJRRn4K",
+      track: "2rH5V5b9LaYu3NhGKqigd8",
+      genre: "modern%20alternative%20pop",
       market: "ES",
     },
     //the glove, mr aplhabet says
@@ -892,6 +969,6 @@ export const getRandomSeed = async () => {
       market: "ES",
     },
   ];
-
+  console.log(seedList.length);
   return seedList[Math.floor(Math.random() * seedList.length)];
 };
