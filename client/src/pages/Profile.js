@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { useQuery } from "@apollo/react-hooks";
+import { useQuery, useMutation } from "@apollo/react-hooks";
 
 import { GET_ME } from "../utils/queries";
-// import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
+import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
 
 import "../styles/Profile.css";
 
@@ -47,6 +47,10 @@ const Profile = () => {
     const embedInter = userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
     setSongIndex(newIndex);
+  };
+
+  const handleRemoveSong = async () => {
+    console.log("song to be removed");
   };
 
   if (!userData?.username) {
@@ -104,6 +108,9 @@ const Profile = () => {
               id="spotifyPlayer"
             ></iframe>
           </div>
+          <button id="removeBtn" onClick={handleRemoveSong}>
+            Remove Song from Profile
+          </button>
           <br></br>
           <button id="rightArrow" onClick={handleNextSong}>
             Next
