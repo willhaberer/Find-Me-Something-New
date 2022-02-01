@@ -54,7 +54,6 @@ const Profile = () => {
   };
 
   const handleRemoveSong = async () => {
-    console.log(embedCode);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -76,7 +75,27 @@ const Profile = () => {
 
   const handleRemoveUser = async () => {
     console.log(userData._id);
-    alert("We are Sorry to See you Go!");
+
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      alert("Must be Signed in to Remove Songs!");
+      return;
+    }
+
+    const userId = userData._id;
+
+    try {
+      const { data } = await removeUser({
+        variables: { userId },
+      });
+      console.log(data);
+      alert("We are Sorry to See you Go!");
+      localStorage.removeItem("id_token");
+      window.location.assign("/");
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   if (!userData?.username) {

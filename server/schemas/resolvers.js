@@ -28,7 +28,7 @@ const resolvers = {
     },
     removeUser: async (parent, { userId }, context) => {
       if (context.user) {
-        const deletedUser = User.findOneAndDelete({ _id: context.user._id });
+        const deletedUser = User.findOneAndDelete({ _id: userId });
         return deletedUser;
       }
       throw new AuthenticationError("Incorrect credentials!");

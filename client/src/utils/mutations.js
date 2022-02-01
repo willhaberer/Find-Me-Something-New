@@ -65,7 +65,7 @@ export const REMOVE_SPOTIFY_SONG = gql`
 
 export const REMOVE_USER = gql`
   mutation removeUser($userId: String!) {
-    removeSpotifySong(userId: $userId) {
+    removeUser(userId: $userId) {
       username
       email
     }
