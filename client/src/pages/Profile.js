@@ -90,9 +90,14 @@ const Profile = () => {
         variables: { userId },
       });
       console.log(data);
-      alert("We are Sorry to See you Go!");
-      localStorage.removeItem("id_token");
-      window.location.assign("/");
+      var areSure = window.confirm(
+        "Are you Sure you Want to Delete your Account?"
+      );
+      if (areSure === true) {
+        alert("We are Sorry to See you Go!");
+        localStorage.removeItem("id_token");
+        window.location.assign("/");
+      }
     } catch (err) {
       console.error(err);
     }
