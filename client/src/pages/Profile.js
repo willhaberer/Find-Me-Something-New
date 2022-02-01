@@ -5,6 +5,8 @@ import { useQuery, useMutation } from "@apollo/react-hooks";
 import { GET_ME } from "../utils/queries";
 import { REMOVE_SPOTIFY_SONG } from "../utils/mutations";
 
+import Auth from "../utils/auth";
+
 import "../styles/Profile.css";
 
 const Profile = () => {
@@ -13,6 +15,7 @@ const Profile = () => {
   const [songIndex, setSongIndex] = useState(0);
 
   const { data } = useQuery(GET_ME);
+  const [removeSong] = useMutation(REMOVE_SPOTIFY_SONG);
 
   const userData = data?.me || {};
   console.log(userData);
@@ -21,6 +24,7 @@ const Profile = () => {
     const index = songIndex;
     const newIndex = songIndex + 1;
     const embedInter = userData.savedSpotifySongs[index];
+    console.log(embedInter);
     setEmbedCode(embedInter);
     if (newIndex === userData.savedSpotifySongs.length) {
       setSongIndex(0);
@@ -50,7 +54,23 @@ const Profile = () => {
   };
 
   const handleRemoveSong = async () => {
-    console.log("song to be removed");
+    console.log(embedCode);
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      alert("Must be Signed in to Remove Songs!");
+      return;
+    }
+    const spotifyTrackId = embedCode;
+    try {
+      const { data } = await removeSong({
+        variables: { spotifyTrackId },
+      });
+      console.log(data);
+      alert("Success Song Removed!");
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   if (!userData?.username) {
