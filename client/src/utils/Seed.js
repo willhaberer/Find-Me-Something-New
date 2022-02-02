@@ -280,6 +280,13 @@ export const getRandomSeed = async () => {
       genre: "bedroom%20soul",
       market: "ES",
     },
+    //epik high, rosario
+    {
+      artist: "5snNHNlYT2UrtZo5HCJkiw",
+      track: "0OWBz5FCeATA2zhHgAk7Uh",
+      genre: "k-rap",
+      market: "ES",
+    },
     //eryn martin, kid
     {
       artist: "58nhaWrZa0dN2OxZ1Pr2Ph",
