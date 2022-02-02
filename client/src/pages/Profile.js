@@ -85,21 +85,21 @@ const Profile = () => {
 
     const userId = userData._id;
 
-    try {
-      const { data } = await removeUser({
-        variables: { userId },
-      });
-      console.log(data);
-      var areSure = window.confirm(
-        "Are you Sure you Want to Delete your Account?"
-      );
-      if (areSure === true) {
-        alert("We are Sorry to See you Go!");
-        localStorage.removeItem("id_token");
-        window.location.assign("/");
+    var areSure = window.confirm(
+      "Are you Sure you Want to Delete your Account?"
+    );
+
+    if (areSure === true) {
+      try {
+        const { data } = await removeUser({
+          variables: { userId },
+        });
+        console.log(data);
+        alert("We Are Sory To See You Go");
+        window.location.reload();
+      } catch (err) {
+        console.error(err);
       }
-    } catch (err) {
-      console.error(err);
     }
   };
 

@@ -1,5 +1,19 @@
 export const getRandomSeed = async () => {
   var seedList = [
+    //50landing, re:birth
+    {
+      artist: "5aTRa02UP1y6PW5klZiTt0",
+      track: "5bwSx1hwmUivlUgY9UhfEB",
+      genre: "sad%20lo-fi",
+      market: "ES",
+    },
+    //93FeetofSmoke, PPL THT I LUV THE MOST
+    {
+      artist: "0plNgbIlOc13T8ot3vyK79",
+      track: "3NvHc9CBl9U1o80jcEcgAP",
+      genre: "emo%20rap",
+      market: "ES",
+    },
     //100 gecs, money machine
     {
       artist: "6PfSUFtkMVoDkx4MQkzOi3",
@@ -154,6 +168,13 @@ export const getRandomSeed = async () => {
       genre: "minnesota%20hip%20hop",
       market: "ES",
     },
+    //caroline polachek, bunny is a rider
+    {
+      artist: "4Ge8xMJNwt6EEXOzVXju9a",
+      track: "1rYABrDmfqVmJMwaNJBUUb",
+      genre: "art%20pop",
+      market: "ES",
+    },
     //cavetown, juliet
     {
       artist: "2hR4h1Cao2ueuI7Cx9c7V8",
@@ -217,11 +238,32 @@ export const getRandomSeed = async () => {
       genre: "pop",
       market: "ES",
     },
+    //destiny rogers, tomboy
+    {
+      artist: "6gezkje7GoJlQbHBgLXHuu",
+      track: "5Ti3fqGTfjUsSdylFNy0Ng",
+      genre: "pop",
+      market: "ES",
+    },
     //dijon, stranger
     {
       artist: "0knGpCTbmG4ctl1wzYRZs4",
       track: "2TfcFXI1FOsO5HCz4X6uRk",
       genre: "bedroom%20soul",
+      market: "ES",
+    },
+    //eryn martin, kid
+    {
+      artist: "58nhaWrZa0dN2OxZ1Pr2Ph",
+      track: "39raAY35hOHPt5MeAGhN4x",
+      genre: "witch%20house",
+      market: "ES",
+    },
+    //eryn martin, ball
+    {
+      artist: "58nhaWrZa0dN2OxZ1Pr2Ph",
+      track: "3CL4OEx96xE6eO9vrHunJY",
+      genre: "drift%20phonk",
       market: "ES",
     },
     //evisbeats, can you see it, japanese market
@@ -328,10 +370,17 @@ export const getRandomSeed = async () => {
       genre: "viral%20pop",
       market: "ES",
     },
+    //iyla, juice
+    {
+      artist: "4LXBFNxqvOcdBVpbgKn6op",
+      track: "2wG9CUSBZaF15R2ohLAnoe",
+      genre: "pop%20soul",
+      market: "ES",
+    },
     //johan bach, violin concerto in a minor
     {
       artist: "5aIqB5nVVvmFsvSdExz408",
-      track: "",
+      track: "28XMNc5If5BmJWYDU42gkw",
       genre: "classical",
       market: "ES",
     },
@@ -354,6 +403,13 @@ export const getRandomSeed = async () => {
       artist: "50JJSqHUf2RQ9xsHs0KMHg",
       track: "0SuLAslEMFZAXf0SwY7syi",
       genre: "pop%20rap",
+      market: "ES",
+    },
+    //jvke, this is what falling in love feels like
+    {
+      artist: "164Uj4eKjl6zTBKfJLFKKK",
+      track: "4UG2Fm0E98LhE2dlNxiAXx",
+      genre: "modern%20indie%20pop",
       market: "ES",
     },
     //kanye, ultralight beam
@@ -398,6 +454,20 @@ export const getRandomSeed = async () => {
       genre: "pop%20country",
       market: "ES",
     },
+    //kygo, higher love
+    {
+      artist: "23fqKkggKUBHNkbKtXEls4",
+      track: "1kKYjjfNYxE0YYgLa7vgVY",
+      genre: "edm",
+      market: "ES",
+    },
+    //leanna firestone, diet coke
+    {
+      artist: "31431J9PD3bfNsPKkezt0d",
+      track: "2e2Yza515Src4ljQmj6VnE",
+      genre: "alt%20z",
+      market: "ES",
+    },
     //lil nas x, montero
     {
       artist: "7jVv8c5Fj3E9VhNjxT4snq",
@@ -438,6 +508,13 @@ export const getRandomSeed = async () => {
       artist: "2qDIR2WlcW3llkGqJWg9VJ",
       track: "2aGNR8A6GnHqoM78T31CCC",
       genre: "pop%2Cr%26b",
+      market: "ES",
+    },
+    //lova, you me and the silence
+    {
+      artist: "1l2NYhptmHjo64MDOcej1x",
+      track: "1GMahQSDyvcn5TIQWxZW0Z",
+      genre: "swedish%20pop",
       market: "ES",
     },
     //lovejoy, sex sells
@@ -482,6 +559,13 @@ export const getRandomSeed = async () => {
       genre: "chill%20r%26b",
       market: "ES",
     },
+    //mac miller, self care
+    {
+      artist: "4LLpKhyESsyAXpc4laK94U",
+      track: "5bJ1DrEM4hNCafcDd1oxHx",
+      genre: "pittsburgh%20rap",
+      market: "ES",
+    },
     //maggie lindemann, scissors
     {
       artist: "0uGk2czvcpWQA383Im6ajf",
@@ -508,6 +592,13 @@ export const getRandomSeed = async () => {
       artist: "1O1r2qVtIFqlTJoB4jsJKd",
       track: "2A0fhBGmHrrQ1kMQ4QpIjO",
       genre: "nashville%20indie",
+      market: "ES",
+    },
+    //monsieur perine, nuestra cancion
+    {
+      artist: "36KsCCwgI0Dep97yVJWmkK",
+      track: "5reQI13tWWYDLMrGcUF4Mk",
+      genre: "gypsy%20jazz",
       market: "ES",
     },
     //moxas, love curse
@@ -566,11 +657,31 @@ export const getRandomSeed = async () => {
       genre: "lo-fi%20indie",
       market: "ES",
     },
+    //passion pit, take a walk
+    {
+      artist: "7gjAu1qr5C2grXeQFFOGeh",
+      track: "4Sfa7hdVkqlM8UW5LsSY3F",
+      genre: "indietronica",
+      market: "ES",
+    },
+    //payday, beam
+    {
+      artist: "6I7IZDntAGBmzkCANUmtV0",
+      track: "1IIw5oVR1xE4bzdl4JgGsc",
+      genre: "modern%20alternative%20pop",
+      market: "ES",
+    },
     //peachy, falling for u
     {
       artist: "7gvbCoLA8lJUktp8G2xIRR",
       track: "2xhGZ3WzOa3tir28y7Cb88",
       genre: "bedroom%20pop",
+    },
+    //peter mcpoland, romeo & jules
+    {
+      artist: "23E65IfLBGQv0FBrMwCcG2",
+      track: "1VyA8mbSyXOdJx2lguR8Uu",
+      genre: "indie%20pop",
     },
     //ph-1, homebody
     {
@@ -633,6 +744,13 @@ export const getRandomSeed = async () => {
       artist: "2KEqzdPS7M5YwGmiuPTdr5",
       track: "1TWNKyNQOBfNUkWWs7FooF",
       genre: "electropop",
+      market: "ES",
+    },
+    //ritto, go okinawa
+    {
+      artist: "0JfcwgDA6dft6cPZy1kyZZ",
+      track: "63XKpMN97iDaZp7xVwzWxf",
+      genre: "japanese%20underground%20rap",
       market: "ES",
     },
     //ryan caraveo, peanut butter waffles
@@ -725,11 +843,17 @@ export const getRandomSeed = async () => {
       genre: "canadian%20hip%20hop",
       market: "ES",
     },
+    //sorry mom, awesome party dude
+    {
+      artist: "0KZzhF4tqJGaVOrXXONmCX",
+      track: "1cyTyUOrmd1xrXWcowEIR4",
+      genre: "indie%20punk",
+    },
     //soulja boy, crank that
     {
       artist: "6GMYJwaziB4ekv1Y6wCDWS",
       track: "66TRwr5uJwPt15mfFkzhbi",
-      genre: "viral%20 rap",
+      genre: "viral%20rap",
     },
     //spill tab, pistolwhip
     {
@@ -798,7 +922,7 @@ export const getRandomSeed = async () => {
     {
       artist: "5k979N1TnPncUyqlXlaRSv",
       track: "6ZblDQM0Gq0daaPAwuHOmD",
-      genre: "shanty",
+      genre: "sea%20shanty",
       market: "ES",
     },
     //the lumineers, ophelia
@@ -806,6 +930,20 @@ export const getRandomSeed = async () => {
       artist: "16oZKvXb6WkQlVAjwo2Wbg",
       track: "3d8y0t70g7hw2FOWl9Z4Fm",
       genre: "folk-pop",
+      market: "ES",
+    },
+    //the smashing pumpkins, zero
+    {
+      artist: "40Yq4vzPs9VNUrIBG5Jr2i",
+      track: "4YFcGTdgmEuw8xTO4XrxbB",
+      genre: "alternative%20rock",
+      market: "ES",
+    },
+    //the submarines, 1940 amplive remix
+    {
+      artist: "6D9Y5lqXKgJv8CV6Ur59oS",
+      track: "6CTbvxcE6JlTM4cdHZry58",
+      genre: "la%20indie",
       market: "ES",
     },
     //tm88, slayerr
