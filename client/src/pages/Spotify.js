@@ -277,13 +277,12 @@ function Spotify() {
             <h2>Popularity on Spotify: {trackPop}</h2>
             <h4 id="subtext">(Popularity is on a scale from 0-100)</h4>
             <h2>Release Date: {releaseDate}</h2>
+            <a id="trackLink" href={trackURL} target="_blank" rel="noreferrer">
+              Listen On Spotify
+            </a>
           </div>
         </div>
         <br></br>
-        <a id="trackLink" href={trackURL} target="_blank" rel="noreferrer">
-          Listen On Spotify
-        </a>
-
         <button id="saveSongBtn" className="bouncy" onClick={handleSaveSong}>
           Save Song to Profile
         </button>
