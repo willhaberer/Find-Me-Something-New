@@ -280,6 +280,13 @@ export const getRandomSeed = async () => {
       genre: "bedroom%20soul",
       market: "ES",
     },
+    //epik high, rosario
+    {
+      artist: "5snNHNlYT2UrtZo5HCJkiw",
+      track: "0OWBz5FCeATA2zhHgAk7Uh",
+      genre: "k-rap",
+      market: "ES",
+    },
     //eryn martin, kid
     {
       artist: "58nhaWrZa0dN2OxZ1Pr2Ph",
@@ -869,6 +876,13 @@ export const getRandomSeed = async () => {
       artist: "5ZPYeVqoWNuukwfarvkyJX",
       track: "14FdeSXWFUosFEevBfOyPb",
       genre: "emo%20rap",
+      market: "ES",
+    },
+    //sheet boss, rush e
+    {
+      artist: "3637OEmwj1q0HinT4YIx5f",
+      track: "7CBN7Kwx1g8SBJZyUbhHc6",
+      genre: "otacore",
       market: "ES",
     },
     //shinigami lite brite

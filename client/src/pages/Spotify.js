@@ -228,7 +228,6 @@ function Spotify() {
   };
 
   const handleSaveSong = async () => {
-    console.log(embedCode);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
