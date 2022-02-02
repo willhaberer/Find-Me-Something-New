@@ -878,6 +878,13 @@ export const getRandomSeed = async () => {
       genre: "emo%20rap",
       market: "ES",
     },
+    //sheet boss, rush e
+    {
+      artist: "3637OEmwj1q0HinT4YIx5f",
+      track: "7CBN7Kwx1g8SBJZyUbhHc6",
+      genre: "otacore",
+      market: "ES",
+    },
     //shinigami lite brite
     {
       artist: "0ntNwPE7MYnKrTh59tU2BA",
