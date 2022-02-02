@@ -74,7 +74,7 @@ export const getRandomSeed = async () => {
     {
       artist: "3hOdow4ZPmrby7Q1wfPLEy",
       track: "7a5TsU5Nw3VPrR1HH7mHJN",
-      genre: "emo",
+      genre: "emo%20rap",
       market: "ES",
     },
     //aries, riding
@@ -82,6 +82,13 @@ export const getRandomSeed = async () => {
       artist: "3hOdow4ZPmrby7Q1wfPLEy",
       track: "4JnX8tY9me7jHqDwgifhwU",
       genre: "pop",
+      market: "ES",
+    },
+    //asl, elevate
+    {
+      artist: "2XxgHIPXNgHGbvtBBGZrKm",
+      track: "0BLR9Bfj4rEdp2LK7sACfY",
+      genre: "vapor%20soul",
       market: "ES",
     },
     //atlas, chamomille?
@@ -103,6 +110,13 @@ export const getRandomSeed = async () => {
       artist: "0Wwji82sLA0Hcvtuak3omb",
       track: "0mvKoOMnjfGtgTEUQAHWMs",
       genre: "chill%20r%26b",
+      market: "ES",
+    },
+    //august 08, 21
+    {
+      artist: "2iB8eFB6flwQculkUrRssi",
+      track: "0yhaMbopctRNQOhMvJxa5M",
+      genre: "la%20pop",
       market: "ES",
     },
     //balue, man in the sixties
@@ -196,11 +210,25 @@ export const getRandomSeed = async () => {
       genre: "chicago%20rap",
       market: "ES",
     },
+    //chloe george, ghost town (voice memo)
+    {
+      artist: "5VZn4mB8pS40aE0kujdX2Y",
+      track: "0PKAijroHpnEtdY20bkGdr",
+      genre: "bedroom%20pop",
+      market: "ES",
+    },
     //coa, akiba
     {
       artist: "6cHHFikz4JtK0BmU86vnvo",
       track: "6Uh6sqPKqPUxvKue0rZSaP",
       genre: "future%20funk",
+      market: "ES",
+    },
+    //cody fry, underground
+    {
+      artist: "7dOCnyDR2oEa1hQlvTXvdT",
+      track: "4An9H5fsEyJZTXtclokIaL",
+      genre: "indiecoustica",
       market: "ES",
     },
     //convolk, these girls
@@ -266,6 +294,13 @@ export const getRandomSeed = async () => {
       genre: "drift%20phonk",
       market: "ES",
     },
+    //eskelite, real bad
+    {
+      artist: "2rmjTX3kwY6K9Oc8f20lyI",
+      track: "2xriQdMi94ARzvXR7sRLZK",
+      genre: "alt%20z",
+      market: "ES",
+    },
     //evisbeats, can you see it, japanese market
     {
       artist: "3dkhk6RTgOerN0NQEmt8Nc",
@@ -328,6 +363,13 @@ export const getRandomSeed = async () => {
       genre: "pop%20punk",
       market: "ES",
     },
+    //guardin, i think your really cool like
+    {
+      artist: "6zqcGQ6MH6yetBUoquMnL7",
+      track: "78cIbVjU1xn7mbQ9i35avl",
+      genre: "sad%20rap",
+      market: "ES",
+    },
     //guardin, it rained and it poured
     {
       artist: "6zqcGQ6MH6yetBUoquMnL7",
@@ -335,11 +377,25 @@ export const getRandomSeed = async () => {
       genre: "lo-fi",
       market: "ES",
     },
+    //hakone, iko
+    {
+      artist: "7CWzXEtz9IgGotcYUQuixF",
+      track: "2Xk7sNFHnDIhnbMgzjGG7m",
+      genre: "japanese%20chillhop",
+      market: "ES",
+    },
     //happybirthdaycalvin, no friends
     {
       artist: "6NkldyBEgC6gnCjJeAbM9F",
       track: "0DiOkFvGcmb4s6uRiGgtYH",
       genre: "melodic%20rap",
+      market: "ES",
+    },
+    //headband andy, level up
+    {
+      artist: "1yGHqqvb0V7V4u2PBaprSm",
+      track: "4A5R3goR8BvAr85pK4IvDK",
+      genre: "pluggnb",
       market: "ES",
     },
     //hobo, all in my head
@@ -594,6 +650,13 @@ export const getRandomSeed = async () => {
       genre: "nashville%20indie",
       market: "ES",
     },
+    //misogi, heart chained
+    {
+      artist: "778Snztf3N5DXp0kHGFl3g",
+      track: "6VubQcwYpNlhdOLDCdOLQp",
+      genre: "vapor%20twitch",
+      market: "ES",
+    },
     //monsieur perine, nuestra cancion
     {
       artist: "36KsCCwgI0Dep97yVJWmkK",
@@ -627,6 +690,13 @@ export const getRandomSeed = async () => {
       artist: "2kxP07DLgs4xlWz8YHlvfh",
       track: "50oEtTUNlce4TuZXQoJzXW",
       genre: "indonesian%20r%26b",
+      market: "ES",
+    },
+    //nina cbham, sola
+    {
+      artist: "4ETeWE9SAfaNU7XQ1RB2wq",
+      track: "52LsiDJXROMrUGE5tMyXk9",
+      genre: "chill%20pop",
       market: "ES",
     },
     //nyk, faded
@@ -737,6 +807,13 @@ export const getRandomSeed = async () => {
       artist: "3lLHpTOJ11tWiUNGYN14gt",
       track: "78DC9wd9Qrikw4jWllFAvM",
       genre: "indie%20soul",
+      market: "ES",
+    },
+    //rendevous at two, fuck me and feed me
+    {
+      artist: "2EcDZA7LVlXzUhOqYzhNGK",
+      track: "5XsOabntixaKUgvZT5ZzBO",
+      genre: "bedroom%20soul",
       market: "ES",
     },
     //rina sawayama, xs
@@ -1107,6 +1184,6 @@ export const getRandomSeed = async () => {
       market: "ES",
     },
   ];
-  console.log(seedList.length);
+
   return seedList[Math.floor(Math.random() * seedList.length)];
 };
