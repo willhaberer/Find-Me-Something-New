@@ -1,4 +1,4 @@
-# Find Me Something New
+# <img src="./assets/Logo_with_title.png" alt="Find Me Something New" height="40px">
 
 -[Description](#description) -[Purpose](#purpose) -[Usage](#usage) -[Mock-up](#) -[Credits](#credits) -[License](#license)
 
