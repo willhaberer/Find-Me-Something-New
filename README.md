@@ -1,4 +1,4 @@
-# Find Me Something New
+# <img src="./assets/Logo_with_title.png" alt="Find Me Something New" height="40px">
 
 -[Description](#description) -[Purpose](#purpose) -[Usage](#usage) -[Mock-up](#) -[Credits](#credits) -[License](#license)
 
@@ -21,6 +21,7 @@ This application was built to showcase a full stack MERN application as well as 
 ## Credits
 
 <a href="https://github.com/willhaberer" target="_blank">Will Haberer</a>
+<a href="https://github.com/teddysahr" target="_blank">Teddy Sahr</a>
 
 ## License
 
