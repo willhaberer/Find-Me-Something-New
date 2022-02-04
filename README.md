@@ -1,10 +1,10 @@
-# <img src="./assets/Logo_with_title.png" alt="Find Me Something New" height="115px" width="500px">
+# <img src="./assets/Logo_with_title.png" alt="Find Me Something New" height="115px" width="515px">
 
 -[Description](#description) -[Purpose](#purpose) -[Usage](#usage) -[Mock-up](#) -[Credits](#credits) -[License](#license)
 
 ## Description
 
-Find Me Something New is a MERN application where users can find randomly generated songs with a low amount of streams.
+Find Me Something New is a MERN application where users can find and save randomly generated songs with a low amount of streams.
 
 ## Purpose
 
