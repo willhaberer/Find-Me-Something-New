@@ -76,3 +76,15 @@ export const getRecTrack = async (token, pop) => {
 
   return result;
 };
+
+export const getTrackById = async (token, trackID) => {
+  const result = await fetch(
+    `https://api.spotify.com/v1/tracks/${trackID}?market=ES`,
+    {
+      method: "GET",
+      headers: { Authorization: "Bearer " + token },
+    }
+  );
+
+  return result;
+};

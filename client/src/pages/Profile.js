@@ -20,6 +20,10 @@ const Profile = () => {
 
   const userData = data?.me || {};
 
+  const getTrackInfo = async () => {
+    return "hello";
+  };
+
   const handleNextSong = async () => {
     const index = songIndex;
     const newIndex = songIndex + 1;
@@ -57,6 +61,8 @@ const Profile = () => {
       userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
     setSongIndex(newIndex);
+    const trackInfo = await getTrackInfo();
+    console.log(trackInfo);
   };
 
   const handleRemoveSong = async () => {
