@@ -13,8 +13,8 @@ function Home() {
         <Link id="link" to="/profile">
           <h3 id="youtubeLink">Profile</h3>
         </Link>
-        <Link id="link" to="/signup">
-          <h3 id="soundcloudLink">Signup</h3>
+        <Link id="link" to="/About">
+          <h3 id="soundcloudLink">About</h3>
         </Link>
       </div>
       <h2>Please choose one of the above sections to get started!</h2>
