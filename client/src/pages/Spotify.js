@@ -11,6 +11,7 @@ function Spotify() {
   //useState
   const [embedCode, setEmbedCode] = useState("initial");
   const [trackURL, setTrackURL] = useState("initial");
+  const [trackID, setTrackID] = useState("initial");
   const [trackPop, setTrackPop] = useState("initial");
   const [releaseDate, setReleaseDate] = useState("initial");
   const [currentSong, setCurrentSong] = useState({});
@@ -64,6 +65,7 @@ function Spotify() {
         setTrackPop(trackData.tracks[0].popularity);
         setReleaseDate(trackData.tracks[0].album.release_date);
         setArtist(songData.artist);
+        setTrackID(songData.trackId);
 
         const inter =
           "https://open.spotify.com/embed/track/" + songData.trackId;
@@ -107,6 +109,7 @@ function Spotify() {
         setEmbedCode(inter);
         setCurrentSong(songData);
         setArtist(songData.artist);
+        setTrackID(songData.trackId);
       }
     } catch (err) {
       console.error(err);
@@ -145,6 +148,7 @@ function Spotify() {
         setEmbedCode(inter);
         setCurrentSong(songData);
         setArtist(songData.artist);
+        setTrackID(songData.trackId);
       }
     } catch (err) {
       console.error(err);
@@ -183,6 +187,7 @@ function Spotify() {
         setEmbedCode(inter);
         setCurrentSong(songData);
         setArtist(songData.artist);
+        setTrackID(songData.trackId);
       }
     } catch (err) {
       console.error(err);
@@ -221,6 +226,7 @@ function Spotify() {
         setEmbedCode(inter);
         setCurrentSong(songData);
         setArtist(songData.artist);
+        setTrackID(songData.trackId);
       }
     } catch (err) {
       console.error(err);
@@ -234,7 +240,7 @@ function Spotify() {
       alert("Must be Signed in to Save Songs!");
       return;
     }
-    const spotifyTrackId = embedCode;
+    const spotifyTrackId = trackID;
     try {
       const { data } = await saveSong({
         variables: { spotifyTrackId },

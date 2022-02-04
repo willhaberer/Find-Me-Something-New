@@ -23,7 +23,9 @@ const Profile = () => {
   const handleNextSong = async () => {
     const index = songIndex;
     const newIndex = songIndex + 1;
-    const embedInter = userData.savedSpotifySongs[index];
+    const embedInter =
+      "https://open.spotify.com/embed/track/" +
+      userData.savedSpotifySongs[index];
     console.log(embedInter);
     setEmbedCode(embedInter);
     if (newIndex === userData.savedSpotifySongs.length) {
@@ -36,7 +38,9 @@ const Profile = () => {
   const handlePreviousSong = async () => {
     const index = songIndex;
     const newIndex = index - 1;
-    const embedInter = userData.savedSpotifySongs[index];
+    const embedInter =
+      "https://open.spotify.com/embed/track/" +
+      userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
     if (newIndex === -1) {
       setSongIndex(userData.savedSpotifySongs.length - 1);
@@ -48,7 +52,9 @@ const Profile = () => {
   const handleView = async () => {
     const index = songIndex;
     const newIndex = songIndex + 1;
-    const embedInter = userData.savedSpotifySongs[index];
+    const embedInter =
+      "https://open.spotify.com/embed/track/" +
+      userData.savedSpotifySongs[index];
     setEmbedCode(embedInter);
     setSongIndex(newIndex);
   };
