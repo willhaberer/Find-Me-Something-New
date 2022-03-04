@@ -119,6 +119,13 @@ export const getRandomSeed = async () => {
       genre: "la%20pop",
       market: "ES",
     },
+    //babymetal, BxMxC
+    {
+      artist: "630wzNP2OL7fl4Xl0GnMWq",
+      track: "2HEM4wcGP2nFT1Z2i6jtvo",
+      genre: "kawaii%20metal",
+      market: "ES",
+    },
     //balue, man in the sixties
     {
       artist: "06dIgxVtLtZPa5FUIJxqtc",
