@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Home.css";
 
 function Home() {
   return (
     <div id="mainContainer">
       <h1>Welcome to Find Me Something New</h1>
+      <Link id="link" to="/login">
+        <h3 id="loginLink">Login</h3>
+      </Link>
       <div id="linkContainer">
         <Link id="link" to="/spotify">
           <h3 id="spotifyLink">Spotify</h3>

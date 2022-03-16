@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import "./styles/App.css";
+
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 
@@ -46,10 +46,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
-        <Navbar />
         <div id="body">
+          <Navbar />
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Login />} />
             <Route exact path="/spotify" element={<Spotify />} />
             <Route exact path="/soundcloud" element={<Soundcloud />} />
             <Route exact path="/youtube" element={<Youtube />} />

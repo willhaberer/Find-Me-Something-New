@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { getSpotifyToken, getRecTrack } from "../utils/API";
-import "../styles/Spotify.css";
+
 import { useMutation, useQuery } from "@apollo/react-hooks";
 import { SAVE_SPOTIFY_SONG, UPDATE_SONGS_FOUND } from "../utils/mutations";
 import { GET_ME } from "../utils/queries";

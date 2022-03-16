@@ -5,8 +5,6 @@ import { ADD_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
-import "../styles/Signup.css";
-
 const Signup = () => {
   const [formState, setFormState] = useState({
     name: "",
@@ -43,12 +41,12 @@ const Signup = () => {
   };
 
   return (
-    <div id="container">
-      <div id="formContainer">
-        <h4 id="formHeader">Signup for FMSN</h4>
-
-        <form>
+    <div id="form-container" className="container">
+      <h4 id="formHeader">Signup for FMSN</h4>
+      <div className="field">
+        <form id="form">
           <input
+            className="input"
             value={formState.email}
             name="email"
             onChange={handleChange}
@@ -56,6 +54,7 @@ const Signup = () => {
             placeholder="Email"
           />
           <input
+            className="input"
             value={formState.username}
             name="username"
             onChange={handleChange}
@@ -63,14 +62,14 @@ const Signup = () => {
             placeholder="Username"
           />
           <input
+            className="input"
             value={formState.password}
             name="password"
             onChange={handleChange}
             type="password"
             placeholder="Password"
           />
-          <br></br>
-          <button id="btn" type="button" onClick={handleFormSubmit}>
+          <button className="button" type="button" onClick={handleFormSubmit}>
             Submit
           </button>
         </form>

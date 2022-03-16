@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { getVidId } from "../utils/API";
-import "../styles/Youtube.css";
 
 function Youtube() {
   const [embedCode, setEmbedCode] = useState("disabled");

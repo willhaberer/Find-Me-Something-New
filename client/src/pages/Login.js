@@ -5,8 +5,6 @@ import { LOGIN_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
-import "../styles/Login.css";
-
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [loginUser, { error, data }] = useMutation(LOGIN_USER);
@@ -44,9 +42,9 @@ const Login = (props) => {
   };
 
   return (
-    <main id="page">
+    <main id="page" className="container">
       <div>
-        <div id="formContainer">
+        <div id="form-container" className="field">
           <h4 id="formHeader">Login to FMSN</h4>
           <div>
             {data ? (
@@ -55,9 +53,9 @@ const Login = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form id="form" onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className="input"
                   placeholder="Your Email"
                   name="email"
                   type="email"
@@ -65,22 +63,25 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="input"
                   placeholder="Password"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <br></br>
+
                 <button
-                  className="btn btn-block btn-info"
+                  className="button"
                   style={{ cursor: "pointer" }}
                   type="submit"
                   id="btn"
                 >
                   Submit
                 </button>
+                <Link id="signuplink" to="/signup">
+                  <h3>Sign Up Here</h3>
+                </Link>
               </form>
             )}
 
@@ -89,10 +90,6 @@ const Login = (props) => {
                 {error.message}
               </div>
             )}
-            <br></br>
-            <Link id="signuplink" to="/signup">
-              <h3>Sign Up Here</h3>
-            </Link>
           </div>
         </div>
       </div>
