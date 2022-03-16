@@ -7,8 +7,6 @@ import { REMOVE_SPOTIFY_SONG, REMOVE_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 
-import "../styles/Profile.css";
-
 const Profile = () => {
   //useState
   const [embedCode, setEmbedCode] = useState("initial");
